@@ -1,0 +1,8852 @@
+{
+  "references": [
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 50,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 63.92,
+      "mean_TD": 169.91,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 50,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 16.4,
+      "mean_TD": 122.4,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 0,
+      "delta_P": 50,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 9.55,
+      "mean_TD": 115.55,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 0,
+      "delta_P": 50,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 6.55,
+      "mean_TD": 112.55,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 25,
+      "window": 0,
+      "delta_P": 50,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 0.0,
+      "mean_TD": 106.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 100,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 79.2,
+      "mean_TD": 210.19,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 100,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 33.51,
+      "mean_TD": 164.5,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 0,
+      "delta_P": 100,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 20.0,
+      "mean_TD": 151.0,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 0,
+      "delta_P": 100,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 14.11,
+      "mean_TD": 145.1,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 50,
+      "window": 0,
+      "delta_P": 100,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 0.0,
+      "mean_TD": 131.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 150,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 95.18,
+      "mean_TD": 251.17,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 150,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 50.95,
+      "mean_TD": 206.95,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 0,
+      "delta_P": 150,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 30.76,
+      "mean_TD": 186.76,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 0,
+      "delta_P": 150,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 21.91,
+      "mean_TD": 177.91,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 75,
+      "window": 0,
+      "delta_P": 150,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 0.0,
+      "mean_TD": 156.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 200,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 112.26,
+      "mean_TD": 293.25,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 200,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 68.75,
+      "mean_TD": 249.75,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 0,
+      "delta_P": 200,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 41.86,
+      "mean_TD": 222.86,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 0,
+      "delta_P": 200,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 30.0,
+      "mean_TD": 211.0,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 100,
+      "window": 0,
+      "delta_P": 200,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 0.0,
+      "mean_TD": 181.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 250,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 130.42,
+      "mean_TD": 336.41,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 250,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 86.86,
+      "mean_TD": 292.86,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 0,
+      "delta_P": 250,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 53.32,
+      "mean_TD": 259.32,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 0,
+      "delta_P": 250,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 38.43,
+      "mean_TD": 244.43,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 125,
+      "window": 0,
+      "delta_P": 250,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 0.0,
+      "mean_TD": 206.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 300,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 147.98,
+      "mean_TD": 378.98,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 300,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 105.58,
+      "mean_TD": 336.58,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 0,
+      "delta_P": 300,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 65.28,
+      "mean_TD": 296.27,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 0,
+      "delta_P": 300,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 47.24,
+      "mean_TD": 278.23,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 150,
+      "window": 0,
+      "delta_P": 300,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 0.0,
+      "mean_TD": 231.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 350,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 165.03,
+      "mean_TD": 421.02,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 350,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 124.33,
+      "mean_TD": 380.32,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 0,
+      "delta_P": 350,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 77.19,
+      "mean_TD": 333.19,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 0,
+      "delta_P": 350,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 56.0,
+      "mean_TD": 312.0,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 175,
+      "window": 0,
+      "delta_P": 350,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 0.0,
+      "mean_TD": 256.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 400,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 183.73,
+      "mean_TD": 464.73,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 400,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 142.55,
+      "mean_TD": 423.54,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 0,
+      "delta_P": 400,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 88.77,
+      "mean_TD": 369.77,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 0,
+      "delta_P": 400,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 64.53,
+      "mean_TD": 345.53,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 200,
+      "window": 0,
+      "delta_P": 400,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 0.0,
+      "mean_TD": 281.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 450,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 203.88,
+      "mean_TD": 509.88,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 450,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 161.45,
+      "mean_TD": 467.44,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 0,
+      "delta_P": 450,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 101.37,
+      "mean_TD": 407.37,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 0,
+      "delta_P": 450,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 74.17,
+      "mean_TD": 380.17,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 225,
+      "window": 0,
+      "delta_P": 450,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 0.0,
+      "mean_TD": 306.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 500,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 225.03,
+      "mean_TD": 556.03,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 500,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 181.79,
+      "mean_TD": 512.79,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 0,
+      "delta_P": 500,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 115.33,
+      "mean_TD": 446.32,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 0,
+      "delta_P": 500,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 84.92,
+      "mean_TD": 415.92,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 250,
+      "window": 0,
+      "delta_P": 500,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 0.0,
+      "mean_TD": 331.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 550,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 246.89,
+      "mean_TD": 602.89,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 550,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 203.12,
+      "mean_TD": 559.11,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 0,
+      "delta_P": 550,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 130.02,
+      "mean_TD": 486.02,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 0,
+      "delta_P": 550,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 96.15,
+      "mean_TD": 452.15,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 275,
+      "window": 0,
+      "delta_P": 550,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 0.0,
+      "mean_TD": 356.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 600,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 269.28,
+      "mean_TD": 650.27,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 600,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 225.14,
+      "mean_TD": 606.13,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 0,
+      "delta_P": 600,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 145.15,
+      "mean_TD": 526.14,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 0,
+      "delta_P": 600,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 107.63,
+      "mean_TD": 488.63,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 300,
+      "window": 0,
+      "delta_P": 600,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 0.0,
+      "mean_TD": 381.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 650,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 292.06,
+      "mean_TD": 698.06,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 650,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 247.67,
+      "mean_TD": 653.66,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 0,
+      "delta_P": 650,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 160.56,
+      "mean_TD": 566.55,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 0,
+      "delta_P": 650,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 119.27,
+      "mean_TD": 525.27,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 325,
+      "window": 0,
+      "delta_P": 650,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 0.0,
+      "mean_TD": 406.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 700,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 315.16,
+      "mean_TD": 746.15,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 700,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 270.58,
+      "mean_TD": 701.58,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 0,
+      "delta_P": 700,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 176.16,
+      "mean_TD": 607.16,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 0,
+      "delta_P": 700,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 131.01,
+      "mean_TD": 562.01,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 350,
+      "window": 0,
+      "delta_P": 700,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 0.0,
+      "mean_TD": 431.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 750,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 338.5,
+      "mean_TD": 794.49,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 750,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 293.79,
+      "mean_TD": 749.79,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 0,
+      "delta_P": 750,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 191.91,
+      "mean_TD": 647.9,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 0,
+      "delta_P": 750,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 142.83,
+      "mean_TD": 598.83,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 375,
+      "window": 0,
+      "delta_P": 750,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 0.0,
+      "mean_TD": 456.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 800,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 362.04,
+      "mean_TD": 843.03,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 800,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 317.24,
+      "mean_TD": 798.24,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 0,
+      "delta_P": 800,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 207.76,
+      "mean_TD": 688.75,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 0,
+      "delta_P": 800,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 154.71,
+      "mean_TD": 635.71,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 400,
+      "window": 0,
+      "delta_P": 800,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 0.0,
+      "mean_TD": 481.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 850,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 385.74,
+      "mean_TD": 891.74,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 850,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 340.87,
+      "mean_TD": 846.87,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 0,
+      "delta_P": 850,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 223.69,
+      "mean_TD": 729.69,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 0,
+      "delta_P": 850,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 166.64,
+      "mean_TD": 672.63,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 425,
+      "window": 0,
+      "delta_P": 850,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 0.0,
+      "mean_TD": 506.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 900,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 409.58,
+      "mean_TD": 940.57,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 0,
+      "delta_P": 900,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 364.66,
+      "mean_TD": 895.66,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 0,
+      "delta_P": 900,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 239.69,
+      "mean_TD": 770.69,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 0,
+      "delta_P": 900,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 178.61,
+      "mean_TD": 709.6,
+      "method": "backward recurrence over the horizon and residual busy times"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 450,
+      "window": 0,
+      "delta_P": 900,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 0.0,
+      "mean_TD": 531.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 50,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 98.78,
+      "mean_TD": 204.78,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 50,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 155.0,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 100,
+      "delta_P": 50,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 155.0,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 100,
+      "delta_P": 50,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 155.0,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 50,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 155.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 100,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 98.89,
+      "mean_TD": 229.89,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 100,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 180.0,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 100,
+      "delta_P": 100,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 180.0,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 100,
+      "delta_P": 100,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 180.0,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 100,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 180.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 150,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 123.63,
+      "mean_TD": 279.62,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 150,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 75.42,
+      "mean_TD": 231.42,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 100,
+      "delta_P": 150,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 205.0,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 100,
+      "delta_P": 150,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 205.0,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 2,
+      "window": 100,
+      "delta_P": 150,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 205.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 200,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 138.02,
+      "mean_TD": 319.01,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 200,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 84.78,
+      "mean_TD": 265.78,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 100,
+      "delta_P": 200,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 230.0,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 100,
+      "delta_P": 200,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 230.0,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 2,
+      "window": 100,
+      "delta_P": 200,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 230.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 250,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 157.67,
+      "mean_TD": 363.67,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 250,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 109.39,
+      "mean_TD": 315.39,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 100,
+      "delta_P": 250,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 56.52,
+      "mean_TD": 262.51,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 100,
+      "delta_P": 250,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 255.0,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 3,
+      "window": 100,
+      "delta_P": 250,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 255.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 300,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 170.21,
+      "mean_TD": 401.21,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 300,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 122.7,
+      "mean_TD": 353.7,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 100,
+      "delta_P": 300,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 61.28,
+      "mean_TD": 292.28,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 100,
+      "delta_P": 300,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 280.0,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 3,
+      "window": 100,
+      "delta_P": 300,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 280.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 350,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 190.31,
+      "mean_TD": 446.3,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 350,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 145.09,
+      "mean_TD": 401.09,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 100,
+      "delta_P": 350,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 71.34,
+      "mean_TD": 327.34,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 100,
+      "delta_P": 350,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 51.01,
+      "mean_TD": 307.01,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 4,
+      "window": 100,
+      "delta_P": 350,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 305.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 400,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 208.35,
+      "mean_TD": 489.35,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 400,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 158.91,
+      "mean_TD": 439.91,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 100,
+      "delta_P": 400,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 79.13,
+      "mean_TD": 360.13,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 100,
+      "delta_P": 400,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 53.07,
+      "mean_TD": 334.06,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 4,
+      "window": 100,
+      "delta_P": 400,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 330.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 450,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 230.67,
+      "mean_TD": 536.66,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 450,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 183.31,
+      "mean_TD": 489.31,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 100,
+      "delta_P": 450,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 90.69,
+      "mean_TD": 396.68,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 100,
+      "delta_P": 450,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 56.99,
+      "mean_TD": 362.98,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 5,
+      "window": 100,
+      "delta_P": 450,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 355.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 500,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 251.18,
+      "mean_TD": 582.18,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 500,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 201.01,
+      "mean_TD": 532.0,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 100,
+      "delta_P": 500,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 100.76,
+      "mean_TD": 431.76,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 100,
+      "delta_P": 500,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 60.96,
+      "mean_TD": 391.96,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 5,
+      "window": 100,
+      "delta_P": 500,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 380.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 550,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 274.52,
+      "mean_TD": 630.52,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 550,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 226.14,
+      "mean_TD": 582.14,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 100,
+      "delta_P": 550,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 112.73,
+      "mean_TD": 468.73,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 100,
+      "delta_P": 550,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 65.77,
+      "mean_TD": 421.77,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 6,
+      "window": 100,
+      "delta_P": 550,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 405.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 600,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 296.34,
+      "mean_TD": 677.33,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 600,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 245.85,
+      "mean_TD": 626.85,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 100,
+      "delta_P": 600,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 123.73,
+      "mean_TD": 504.73,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 100,
+      "delta_P": 600,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 70.61,
+      "mean_TD": 451.6,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 6,
+      "window": 100,
+      "delta_P": 600,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 430.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 650,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 320.22,
+      "mean_TD": 726.22,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 650,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 271.27,
+      "mean_TD": 677.27,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 100,
+      "delta_P": 650,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 135.86,
+      "mean_TD": 541.85,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 100,
+      "delta_P": 650,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 75.89,
+      "mean_TD": 481.88,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 7,
+      "window": 100,
+      "delta_P": 650,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 455.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 700,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 342.81,
+      "mean_TD": 773.81,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 700,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 292.18,
+      "mean_TD": 723.18,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 100,
+      "delta_P": 700,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 147.32,
+      "mean_TD": 578.31,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 100,
+      "delta_P": 700,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 81.18,
+      "mean_TD": 512.18,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 7,
+      "window": 100,
+      "delta_P": 700,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 480.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 750,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 367.02,
+      "mean_TD": 823.02,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 750,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 317.73,
+      "mean_TD": 773.73,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 100,
+      "delta_P": 750,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 159.52,
+      "mean_TD": 615.52,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 100,
+      "delta_P": 750,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 86.74,
+      "mean_TD": 542.73,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 8,
+      "window": 100,
+      "delta_P": 750,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 505.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 800,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 390.12,
+      "mean_TD": 871.11,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 800,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 339.42,
+      "mean_TD": 820.42,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 100,
+      "delta_P": 800,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 171.25,
+      "mean_TD": 652.25,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 100,
+      "delta_P": 800,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 92.3,
+      "mean_TD": 573.29,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 8,
+      "window": 100,
+      "delta_P": 800,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 530.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 850,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 414.53,
+      "mean_TD": 920.53,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 850,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 365.02,
+      "mean_TD": 871.01,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 100,
+      "delta_P": 850,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 183.5,
+      "mean_TD": 689.5,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 100,
+      "delta_P": 850,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 98.02,
+      "mean_TD": 604.02,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 9,
+      "window": 100,
+      "delta_P": 850,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 555.0,
+      "method": "next window boundary only"
+    },
+    {
+      "controller": "sequential",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 900,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 437.97,
+      "mean_TD": 968.96,
+      "method": "forward recurrence over gate times and batch sizes"
+    },
+    {
+      "controller": "macpe1",
+      "k_P": 1,
+      "window": 100,
+      "delta_P": 900,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 387.25,
+      "mean_TD": 918.24,
+      "method": "forward recurrence over gate times"
+    },
+    {
+      "controller": "macpe2",
+      "k_P": 2,
+      "window": 100,
+      "delta_P": 900,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 195.4,
+      "mean_TD": 726.39,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "macpe3",
+      "k_P": 3,
+      "window": 100,
+      "delta_P": 900,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 103.75,
+      "mean_TD": 634.74,
+      "method": "exact forward recurrence over window-aligned residuals"
+    },
+    {
+      "controller": "sufficient",
+      "k_P": 9,
+      "window": 100,
+      "delta_P": 900,
+      "delta_E": 100,
+      "requests": 200,
+      "spacing": 2,
+      "mean_TW": 49.0,
+      "mean_TD": 580.0,
+      "method": "next window boundary only"
+    }
+  ],
+  "fixed_periodic_references": [
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 25,
+      "T_E": 25,
+      "T_G": 50,
+      "mean_TW": 24.0,
+      "mean_TD": 74.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 25,
+      "T_E": 25,
+      "T_G": 50,
+      "mean_TW": 12.0,
+      "mean_TD": 62.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 13,
+      "T_P": 25,
+      "T_E": 25,
+      "T_G": 50,
+      "mean_TW": 0.0,
+      "mean_TD": 50.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 50,
+      "T_G": 100,
+      "mean_TW": 49.0,
+      "mean_TD": 149.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 50,
+      "T_G": 100,
+      "mean_TW": 24.0,
+      "mean_TD": 124.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 25,
+      "T_P": 50,
+      "T_E": 50,
+      "T_G": 100,
+      "mean_TW": 0.0,
+      "mean_TD": 100.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 75,
+      "T_E": 75,
+      "T_G": 150,
+      "mean_TW": 80.0,
+      "mean_TD": 230.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 75,
+      "T_E": 75,
+      "T_G": 150,
+      "mean_TW": 38.38,
+      "mean_TD": 188.38
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 38,
+      "T_P": 75,
+      "T_E": 75,
+      "T_G": 150,
+      "mean_TW": 0.0,
+      "mean_TD": 150.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 100,
+      "T_G": 200,
+      "mean_TW": 99.0,
+      "mean_TD": 299.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 100,
+      "T_G": 200,
+      "mean_TW": 49.0,
+      "mean_TD": 249.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 50,
+      "T_P": 100,
+      "T_E": 100,
+      "T_G": 200,
+      "mean_TW": 0.0,
+      "mean_TD": 200.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 125,
+      "T_E": 125,
+      "T_G": 250,
+      "mean_TW": 142.25,
+      "mean_TD": 392.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 125,
+      "T_E": 125,
+      "T_G": 250,
+      "mean_TW": 64.75,
+      "mean_TD": 314.75
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 63,
+      "T_P": 125,
+      "T_E": 125,
+      "T_G": 250,
+      "mean_TW": 0.0,
+      "mean_TD": 250.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 150,
+      "T_G": 300,
+      "mean_TW": 173.0,
+      "mean_TD": 473.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 150,
+      "T_G": 300,
+      "mean_TW": 80.0,
+      "mean_TD": 380.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 75,
+      "T_P": 150,
+      "T_E": 150,
+      "T_G": 300,
+      "mean_TW": 0.0,
+      "mean_TD": 300.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 175,
+      "T_E": 175,
+      "T_G": 350,
+      "mean_TW": 191.25,
+      "mean_TD": 541.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 175,
+      "T_E": 175,
+      "T_G": 350,
+      "mean_TW": 94.12,
+      "mean_TD": 444.12
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 88,
+      "T_P": 175,
+      "T_E": 175,
+      "T_G": 350,
+      "mean_TW": 0.0,
+      "mean_TD": 350.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 200,
+      "T_G": 400,
+      "mean_TW": 199.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 200,
+      "T_G": 400,
+      "mean_TW": 99.0,
+      "mean_TD": 499.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 100,
+      "T_P": 200,
+      "T_E": 200,
+      "T_G": 400,
+      "mean_TW": 0.0,
+      "mean_TD": 400.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 225,
+      "T_E": 225,
+      "T_G": 450,
+      "mean_TW": 248.75,
+      "mean_TD": 698.75
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 225,
+      "T_E": 225,
+      "T_G": 450,
+      "mean_TW": 122.75,
+      "mean_TD": 572.75
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 113,
+      "T_P": 225,
+      "T_E": 225,
+      "T_G": 450,
+      "mean_TW": 0.0,
+      "mean_TD": 450.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 250,
+      "T_G": 500,
+      "mean_TW": 298.5,
+      "mean_TD": 798.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 250,
+      "T_G": 500,
+      "mean_TW": 142.25,
+      "mean_TD": 642.25
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 125,
+      "T_P": 250,
+      "T_E": 250,
+      "T_G": 500,
+      "mean_TW": 0.0,
+      "mean_TD": 500.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 275,
+      "T_E": 275,
+      "T_G": 550,
+      "mean_TW": 348.25,
+      "mean_TD": 898.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 275,
+      "T_E": 275,
+      "T_G": 550,
+      "mean_TW": 159.88,
+      "mean_TD": 709.88
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 138,
+      "T_P": 275,
+      "T_E": 275,
+      "T_G": 550,
+      "mean_TW": 0.0,
+      "mean_TD": 550.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 300,
+      "T_G": 600,
+      "mean_TW": 398.0,
+      "mean_TD": 998.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 300,
+      "T_G": 600,
+      "mean_TW": 173.0,
+      "mean_TD": 773.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 150,
+      "T_P": 300,
+      "T_E": 300,
+      "T_G": 600,
+      "mean_TW": 0.0,
+      "mean_TD": 600.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 325,
+      "T_E": 325,
+      "T_G": 650,
+      "mean_TW": 447.75,
+      "mean_TD": 1097.75
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 325,
+      "T_E": 325,
+      "T_G": 650,
+      "mean_TW": 184.5,
+      "mean_TD": 834.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 163,
+      "T_P": 325,
+      "T_E": 325,
+      "T_G": 650,
+      "mean_TW": 0.0,
+      "mean_TD": 650.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 350,
+      "T_G": 700,
+      "mean_TW": 497.5,
+      "mean_TD": 1197.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 350,
+      "T_G": 700,
+      "mean_TW": 191.25,
+      "mean_TD": 891.25
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 175,
+      "T_P": 350,
+      "T_E": 350,
+      "T_G": 700,
+      "mean_TW": 0.0,
+      "mean_TD": 700.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 375,
+      "T_E": 375,
+      "T_G": 750,
+      "mean_TW": 547.25,
+      "mean_TD": 1297.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 375,
+      "T_E": 375,
+      "T_G": 750,
+      "mean_TW": 196.62,
+      "mean_TD": 946.62
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 188,
+      "T_P": 375,
+      "T_E": 375,
+      "T_G": 750,
+      "mean_TW": 0.0,
+      "mean_TD": 750.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 400,
+      "T_G": 800,
+      "mean_TW": 597.0,
+      "mean_TD": 1397.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 400,
+      "T_G": 800,
+      "mean_TW": 199.0,
+      "mean_TD": 999.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 200,
+      "T_P": 400,
+      "T_E": 400,
+      "T_G": 800,
+      "mean_TW": 0.0,
+      "mean_TD": 800.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 425,
+      "T_E": 425,
+      "T_G": 850,
+      "mean_TW": 646.75,
+      "mean_TD": 1496.75
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 425,
+      "T_E": 425,
+      "T_G": 850,
+      "mean_TW": 223.88,
+      "mean_TD": 1073.88
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 213,
+      "T_P": 425,
+      "T_E": 425,
+      "T_G": 850,
+      "mean_TW": 0.0,
+      "mean_TD": 850.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 450,
+      "T_G": 900,
+      "mean_TW": 696.5,
+      "mean_TD": 1596.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 450,
+      "T_G": 900,
+      "mean_TW": 248.75,
+      "mean_TD": 1148.75
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 225,
+      "T_P": 450,
+      "T_E": 450,
+      "T_G": 900,
+      "mean_TW": 0.0,
+      "mean_TD": 900.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 475,
+      "T_E": 475,
+      "T_G": 950,
+      "mean_TW": 746.25,
+      "mean_TD": 1696.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 475,
+      "T_E": 475,
+      "T_G": 950,
+      "mean_TW": 273.62,
+      "mean_TD": 1223.62
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 238,
+      "T_P": 475,
+      "T_E": 475,
+      "T_G": 950,
+      "mean_TW": 0.0,
+      "mean_TD": 950.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 500,
+      "T_G": 1000,
+      "mean_TW": 796.0,
+      "mean_TD": 1796.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 500,
+      "T_G": 1000,
+      "mean_TW": 298.5,
+      "mean_TD": 1298.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 250,
+      "T_P": 500,
+      "T_E": 500,
+      "T_G": 1000,
+      "mean_TW": 0.0,
+      "mean_TD": 1000.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 25,
+      "T_E": 25,
+      "T_G": 50,
+      "mean_TW": 49.0,
+      "mean_TD": 99.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 25,
+      "T_E": 25,
+      "T_G": 50,
+      "mean_TW": 49.0,
+      "mean_TD": 99.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 25,
+      "T_E": 25,
+      "T_G": 50,
+      "mean_TW": 49.0,
+      "mean_TD": 99.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 50,
+      "T_G": 100,
+      "mean_TW": 49.0,
+      "mean_TD": 149.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 50,
+      "T_G": 100,
+      "mean_TW": 49.0,
+      "mean_TD": 149.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 50,
+      "T_G": 100,
+      "mean_TW": 49.0,
+      "mean_TD": 149.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 75,
+      "T_E": 75,
+      "T_G": 150,
+      "mean_TW": 99.0,
+      "mean_TD": 249.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 75,
+      "T_E": 75,
+      "T_G": 150,
+      "mean_TW": 49.0,
+      "mean_TD": 199.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 75,
+      "T_E": 75,
+      "T_G": 150,
+      "mean_TW": 49.0,
+      "mean_TD": 199.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 100,
+      "T_G": 200,
+      "mean_TW": 99.0,
+      "mean_TD": 299.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 100,
+      "T_G": 200,
+      "mean_TW": 49.0,
+      "mean_TD": 249.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 100,
+      "T_G": 200,
+      "mean_TW": 49.0,
+      "mean_TD": 249.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 125,
+      "T_E": 125,
+      "T_G": 250,
+      "mean_TW": 173.0,
+      "mean_TD": 423.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 125,
+      "T_E": 125,
+      "T_G": 250,
+      "mean_TW": 99.0,
+      "mean_TD": 349.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 2,
+      "T_P": 125,
+      "T_E": 125,
+      "T_G": 250,
+      "mean_TW": 49.0,
+      "mean_TD": 299.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 150,
+      "T_G": 300,
+      "mean_TW": 173.0,
+      "mean_TD": 473.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 150,
+      "T_G": 300,
+      "mean_TW": 99.0,
+      "mean_TD": 399.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 2,
+      "T_P": 150,
+      "T_E": 150,
+      "T_G": 300,
+      "mean_TW": 49.0,
+      "mean_TD": 349.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 175,
+      "T_E": 175,
+      "T_G": 350,
+      "mean_TW": 199.0,
+      "mean_TD": 549.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 175,
+      "T_E": 175,
+      "T_G": 350,
+      "mean_TW": 99.0,
+      "mean_TD": 449.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 2,
+      "T_P": 175,
+      "T_E": 175,
+      "T_G": 350,
+      "mean_TW": 49.0,
+      "mean_TD": 399.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 200,
+      "T_G": 400,
+      "mean_TW": 199.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 200,
+      "T_G": 400,
+      "mean_TW": 99.0,
+      "mean_TD": 499.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 2,
+      "T_P": 200,
+      "T_E": 200,
+      "T_G": 400,
+      "mean_TW": 49.0,
+      "mean_TD": 449.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 225,
+      "T_E": 225,
+      "T_G": 450,
+      "mean_TW": 298.5,
+      "mean_TD": 748.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 225,
+      "T_E": 225,
+      "T_G": 450,
+      "mean_TW": 173.0,
+      "mean_TD": 623.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 3,
+      "T_P": 225,
+      "T_E": 225,
+      "T_G": 450,
+      "mean_TW": 49.0,
+      "mean_TD": 499.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 250,
+      "T_G": 500,
+      "mean_TW": 298.5,
+      "mean_TD": 798.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 250,
+      "T_G": 500,
+      "mean_TW": 173.0,
+      "mean_TD": 673.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 3,
+      "T_P": 250,
+      "T_E": 250,
+      "T_G": 500,
+      "mean_TW": 49.0,
+      "mean_TD": 549.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 275,
+      "T_E": 275,
+      "T_G": 550,
+      "mean_TW": 398.0,
+      "mean_TD": 948.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 275,
+      "T_E": 275,
+      "T_G": 550,
+      "mean_TW": 173.0,
+      "mean_TD": 723.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 3,
+      "T_P": 275,
+      "T_E": 275,
+      "T_G": 550,
+      "mean_TW": 49.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 300,
+      "T_G": 600,
+      "mean_TW": 398.0,
+      "mean_TD": 998.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 300,
+      "T_G": 600,
+      "mean_TW": 173.0,
+      "mean_TD": 773.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 3,
+      "T_P": 300,
+      "T_E": 300,
+      "T_G": 600,
+      "mean_TW": 49.0,
+      "mean_TD": 649.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 325,
+      "T_E": 325,
+      "T_G": 650,
+      "mean_TW": 497.5,
+      "mean_TD": 1147.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 325,
+      "T_E": 325,
+      "T_G": 650,
+      "mean_TW": 199.0,
+      "mean_TD": 849.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 4,
+      "T_P": 325,
+      "T_E": 325,
+      "T_G": 650,
+      "mean_TW": 49.0,
+      "mean_TD": 699.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 350,
+      "T_G": 700,
+      "mean_TW": 497.5,
+      "mean_TD": 1197.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 350,
+      "T_G": 700,
+      "mean_TW": 199.0,
+      "mean_TD": 899.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 4,
+      "T_P": 350,
+      "T_E": 350,
+      "T_G": 700,
+      "mean_TW": 49.0,
+      "mean_TD": 749.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 375,
+      "T_E": 375,
+      "T_G": 750,
+      "mean_TW": 597.0,
+      "mean_TD": 1347.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 375,
+      "T_E": 375,
+      "T_G": 750,
+      "mean_TW": 199.0,
+      "mean_TD": 949.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 4,
+      "T_P": 375,
+      "T_E": 375,
+      "T_G": 750,
+      "mean_TW": 49.0,
+      "mean_TD": 799.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 400,
+      "T_G": 800,
+      "mean_TW": 597.0,
+      "mean_TD": 1397.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 400,
+      "T_G": 800,
+      "mean_TW": 199.0,
+      "mean_TD": 999.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 4,
+      "T_P": 400,
+      "T_E": 400,
+      "T_G": 800,
+      "mean_TW": 49.0,
+      "mean_TD": 849.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 425,
+      "T_E": 425,
+      "T_G": 850,
+      "mean_TW": 696.5,
+      "mean_TD": 1546.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 425,
+      "T_E": 425,
+      "T_G": 850,
+      "mean_TW": 298.5,
+      "mean_TD": 1148.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 5,
+      "T_P": 425,
+      "T_E": 425,
+      "T_G": 850,
+      "mean_TW": 49.0,
+      "mean_TD": 899.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 450,
+      "T_G": 900,
+      "mean_TW": 696.5,
+      "mean_TD": 1596.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 450,
+      "T_G": 900,
+      "mean_TW": 298.5,
+      "mean_TD": 1198.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 5,
+      "T_P": 450,
+      "T_E": 450,
+      "T_G": 900,
+      "mean_TW": 49.0,
+      "mean_TD": 949.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 475,
+      "T_E": 475,
+      "T_G": 950,
+      "mean_TW": 796.0,
+      "mean_TD": 1746.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 475,
+      "T_E": 475,
+      "T_G": 950,
+      "mean_TW": 298.5,
+      "mean_TD": 1248.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 5,
+      "T_P": 475,
+      "T_E": 475,
+      "T_G": 950,
+      "mean_TW": 49.0,
+      "mean_TD": 999.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 500,
+      "T_G": 1000,
+      "mean_TW": 796.0,
+      "mean_TD": 1796.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 500,
+      "T_G": 1000,
+      "mean_TW": 298.5,
+      "mean_TD": 1298.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 5,
+      "T_P": 500,
+      "T_E": 500,
+      "T_G": 1000,
+      "mean_TW": 49.0,
+      "mean_TD": 1049.0
+    }
+  ],
+  "surface_references": [
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 50,
+      "mean_TW": 49.0,
+      "mean_TD": 149.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 50,
+      "mean_TW": 24.0,
+      "mean_TD": 124.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 25,
+      "T_P": 50,
+      "T_E": 50,
+      "mean_TW": 0.0,
+      "mean_TD": 100.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 100,
+      "mean_TW": 80.0,
+      "mean_TD": 230.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 100,
+      "mean_TW": 24.0,
+      "mean_TD": 174.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 25,
+      "T_P": 50,
+      "T_E": 100,
+      "mean_TW": 0.0,
+      "mean_TD": 150.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 150,
+      "mean_TW": 99.0,
+      "mean_TD": 299.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 150,
+      "mean_TW": 24.0,
+      "mean_TD": 224.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 25,
+      "T_P": 50,
+      "T_E": 150,
+      "mean_TW": 0.0,
+      "mean_TD": 200.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 200,
+      "mean_TW": 142.25,
+      "mean_TD": 392.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 200,
+      "mean_TW": 24.0,
+      "mean_TD": 274.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 25,
+      "T_P": 50,
+      "T_E": 200,
+      "mean_TW": 0.0,
+      "mean_TD": 250.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 250,
+      "mean_TW": 173.0,
+      "mean_TD": 473.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 250,
+      "mean_TW": 24.0,
+      "mean_TD": 324.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 25,
+      "T_P": 50,
+      "T_E": 250,
+      "mean_TW": 0.0,
+      "mean_TD": 300.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 300,
+      "mean_TW": 191.25,
+      "mean_TD": 541.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 300,
+      "mean_TW": 24.0,
+      "mean_TD": 374.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 25,
+      "T_P": 50,
+      "T_E": 300,
+      "mean_TW": 0.0,
+      "mean_TD": 350.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 350,
+      "mean_TW": 199.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 350,
+      "mean_TW": 24.0,
+      "mean_TD": 424.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 25,
+      "T_P": 50,
+      "T_E": 350,
+      "mean_TW": 0.0,
+      "mean_TD": 400.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 400,
+      "mean_TW": 248.75,
+      "mean_TD": 698.75
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 400,
+      "mean_TW": 24.0,
+      "mean_TD": 474.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 25,
+      "T_P": 50,
+      "T_E": 400,
+      "mean_TW": 0.0,
+      "mean_TD": 450.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 450,
+      "mean_TW": 298.5,
+      "mean_TD": 798.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 450,
+      "mean_TW": 24.0,
+      "mean_TD": 524.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 25,
+      "T_P": 50,
+      "T_E": 450,
+      "mean_TW": 0.0,
+      "mean_TD": 500.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 500,
+      "mean_TW": 348.25,
+      "mean_TD": 898.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 500,
+      "mean_TW": 24.0,
+      "mean_TD": 574.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 25,
+      "T_P": 50,
+      "T_E": 500,
+      "mean_TW": 0.0,
+      "mean_TD": 550.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 50,
+      "mean_TW": 80.0,
+      "mean_TD": 230.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 50,
+      "mean_TW": 49.0,
+      "mean_TD": 199.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 50,
+      "T_P": 100,
+      "T_E": 50,
+      "mean_TW": 0.0,
+      "mean_TD": 150.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 100,
+      "mean_TW": 99.0,
+      "mean_TD": 299.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 100,
+      "mean_TW": 49.0,
+      "mean_TD": 249.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 50,
+      "T_P": 100,
+      "T_E": 100,
+      "mean_TW": 0.0,
+      "mean_TD": 200.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 150,
+      "mean_TW": 142.25,
+      "mean_TD": 392.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 150,
+      "mean_TW": 49.0,
+      "mean_TD": 299.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 50,
+      "T_P": 100,
+      "T_E": 150,
+      "mean_TW": 0.0,
+      "mean_TD": 250.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 200,
+      "mean_TW": 173.0,
+      "mean_TD": 473.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 200,
+      "mean_TW": 49.0,
+      "mean_TD": 349.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 50,
+      "T_P": 100,
+      "T_E": 200,
+      "mean_TW": 0.0,
+      "mean_TD": 300.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 250,
+      "mean_TW": 191.25,
+      "mean_TD": 541.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 250,
+      "mean_TW": 49.0,
+      "mean_TD": 399.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 50,
+      "T_P": 100,
+      "T_E": 250,
+      "mean_TW": 0.0,
+      "mean_TD": 350.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 300,
+      "mean_TW": 199.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 300,
+      "mean_TW": 49.0,
+      "mean_TD": 449.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 50,
+      "T_P": 100,
+      "T_E": 300,
+      "mean_TW": 0.0,
+      "mean_TD": 400.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 350,
+      "mean_TW": 248.75,
+      "mean_TD": 698.75
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 350,
+      "mean_TW": 49.0,
+      "mean_TD": 499.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 50,
+      "T_P": 100,
+      "T_E": 350,
+      "mean_TW": 0.0,
+      "mean_TD": 450.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 400,
+      "mean_TW": 298.5,
+      "mean_TD": 798.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 400,
+      "mean_TW": 49.0,
+      "mean_TD": 549.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 50,
+      "T_P": 100,
+      "T_E": 400,
+      "mean_TW": 0.0,
+      "mean_TD": 500.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 450,
+      "mean_TW": 348.25,
+      "mean_TD": 898.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 450,
+      "mean_TW": 49.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 50,
+      "T_P": 100,
+      "T_E": 450,
+      "mean_TW": 0.0,
+      "mean_TD": 550.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 500,
+      "mean_TW": 398.0,
+      "mean_TD": 998.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 500,
+      "mean_TW": 49.0,
+      "mean_TD": 649.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 50,
+      "T_P": 100,
+      "T_E": 500,
+      "mean_TW": 0.0,
+      "mean_TD": 600.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 50,
+      "mean_TW": 99.0,
+      "mean_TD": 299.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 50,
+      "mean_TW": 80.0,
+      "mean_TD": 280.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 75,
+      "T_P": 150,
+      "T_E": 50,
+      "mean_TW": 0.0,
+      "mean_TD": 200.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 100,
+      "mean_TW": 142.25,
+      "mean_TD": 392.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 100,
+      "mean_TW": 80.0,
+      "mean_TD": 330.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 75,
+      "T_P": 150,
+      "T_E": 100,
+      "mean_TW": 0.0,
+      "mean_TD": 250.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 150,
+      "mean_TW": 173.0,
+      "mean_TD": 473.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 150,
+      "mean_TW": 80.0,
+      "mean_TD": 380.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 75,
+      "T_P": 150,
+      "T_E": 150,
+      "mean_TW": 0.0,
+      "mean_TD": 300.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 200,
+      "mean_TW": 191.25,
+      "mean_TD": 541.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 200,
+      "mean_TW": 80.0,
+      "mean_TD": 430.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 75,
+      "T_P": 150,
+      "T_E": 200,
+      "mean_TW": 0.0,
+      "mean_TD": 350.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 250,
+      "mean_TW": 199.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 250,
+      "mean_TW": 80.0,
+      "mean_TD": 480.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 75,
+      "T_P": 150,
+      "T_E": 250,
+      "mean_TW": 0.0,
+      "mean_TD": 400.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 300,
+      "mean_TW": 248.75,
+      "mean_TD": 698.75
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 300,
+      "mean_TW": 80.0,
+      "mean_TD": 530.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 75,
+      "T_P": 150,
+      "T_E": 300,
+      "mean_TW": 0.0,
+      "mean_TD": 450.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 350,
+      "mean_TW": 298.5,
+      "mean_TD": 798.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 350,
+      "mean_TW": 80.0,
+      "mean_TD": 580.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 75,
+      "T_P": 150,
+      "T_E": 350,
+      "mean_TW": 0.0,
+      "mean_TD": 500.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 400,
+      "mean_TW": 348.25,
+      "mean_TD": 898.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 400,
+      "mean_TW": 80.0,
+      "mean_TD": 630.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 75,
+      "T_P": 150,
+      "T_E": 400,
+      "mean_TW": 0.0,
+      "mean_TD": 550.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 450,
+      "mean_TW": 398.0,
+      "mean_TD": 998.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 450,
+      "mean_TW": 80.0,
+      "mean_TD": 680.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 75,
+      "T_P": 150,
+      "T_E": 450,
+      "mean_TW": 0.0,
+      "mean_TD": 600.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 500,
+      "mean_TW": 447.75,
+      "mean_TD": 1097.75
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 500,
+      "mean_TW": 80.0,
+      "mean_TD": 730.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 75,
+      "T_P": 150,
+      "T_E": 500,
+      "mean_TW": 0.0,
+      "mean_TD": 650.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 50,
+      "mean_TW": 142.25,
+      "mean_TD": 392.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 50,
+      "mean_TW": 99.0,
+      "mean_TD": 349.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 100,
+      "T_P": 200,
+      "T_E": 50,
+      "mean_TW": 0.0,
+      "mean_TD": 250.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 100,
+      "mean_TW": 173.0,
+      "mean_TD": 473.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 100,
+      "mean_TW": 99.0,
+      "mean_TD": 399.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 100,
+      "T_P": 200,
+      "T_E": 100,
+      "mean_TW": 0.0,
+      "mean_TD": 300.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 150,
+      "mean_TW": 191.25,
+      "mean_TD": 541.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 150,
+      "mean_TW": 99.0,
+      "mean_TD": 449.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 100,
+      "T_P": 200,
+      "T_E": 150,
+      "mean_TW": 0.0,
+      "mean_TD": 350.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 200,
+      "mean_TW": 199.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 200,
+      "mean_TW": 99.0,
+      "mean_TD": 499.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 100,
+      "T_P": 200,
+      "T_E": 200,
+      "mean_TW": 0.0,
+      "mean_TD": 400.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 250,
+      "mean_TW": 248.75,
+      "mean_TD": 698.75
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 250,
+      "mean_TW": 99.0,
+      "mean_TD": 549.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 100,
+      "T_P": 200,
+      "T_E": 250,
+      "mean_TW": 0.0,
+      "mean_TD": 450.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 300,
+      "mean_TW": 298.5,
+      "mean_TD": 798.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 300,
+      "mean_TW": 99.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 100,
+      "T_P": 200,
+      "T_E": 300,
+      "mean_TW": 0.0,
+      "mean_TD": 500.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 350,
+      "mean_TW": 348.25,
+      "mean_TD": 898.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 350,
+      "mean_TW": 99.0,
+      "mean_TD": 649.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 100,
+      "T_P": 200,
+      "T_E": 350,
+      "mean_TW": 0.0,
+      "mean_TD": 550.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 400,
+      "mean_TW": 398.0,
+      "mean_TD": 998.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 400,
+      "mean_TW": 99.0,
+      "mean_TD": 699.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 100,
+      "T_P": 200,
+      "T_E": 400,
+      "mean_TW": 0.0,
+      "mean_TD": 600.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 450,
+      "mean_TW": 447.75,
+      "mean_TD": 1097.75
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 450,
+      "mean_TW": 99.0,
+      "mean_TD": 749.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 100,
+      "T_P": 200,
+      "T_E": 450,
+      "mean_TW": 0.0,
+      "mean_TD": 650.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 500,
+      "mean_TW": 497.5,
+      "mean_TD": 1197.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 500,
+      "mean_TW": 99.0,
+      "mean_TD": 799.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 100,
+      "T_P": 200,
+      "T_E": 500,
+      "mean_TW": 0.0,
+      "mean_TD": 700.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 50,
+      "mean_TW": 173.0,
+      "mean_TD": 473.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 50,
+      "mean_TW": 142.25,
+      "mean_TD": 442.25
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 125,
+      "T_P": 250,
+      "T_E": 50,
+      "mean_TW": 0.0,
+      "mean_TD": 300.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 100,
+      "mean_TW": 191.25,
+      "mean_TD": 541.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 100,
+      "mean_TW": 142.25,
+      "mean_TD": 492.25
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 125,
+      "T_P": 250,
+      "T_E": 100,
+      "mean_TW": 0.0,
+      "mean_TD": 350.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 150,
+      "mean_TW": 199.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 150,
+      "mean_TW": 142.25,
+      "mean_TD": 542.25
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 125,
+      "T_P": 250,
+      "T_E": 150,
+      "mean_TW": 0.0,
+      "mean_TD": 400.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 200,
+      "mean_TW": 248.75,
+      "mean_TD": 698.75
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 200,
+      "mean_TW": 142.25,
+      "mean_TD": 592.25
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 125,
+      "T_P": 250,
+      "T_E": 200,
+      "mean_TW": 0.0,
+      "mean_TD": 450.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 250,
+      "mean_TW": 298.5,
+      "mean_TD": 798.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 250,
+      "mean_TW": 142.25,
+      "mean_TD": 642.25
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 125,
+      "T_P": 250,
+      "T_E": 250,
+      "mean_TW": 0.0,
+      "mean_TD": 500.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 300,
+      "mean_TW": 348.25,
+      "mean_TD": 898.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 300,
+      "mean_TW": 142.25,
+      "mean_TD": 692.25
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 125,
+      "T_P": 250,
+      "T_E": 300,
+      "mean_TW": 0.0,
+      "mean_TD": 550.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 350,
+      "mean_TW": 398.0,
+      "mean_TD": 998.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 350,
+      "mean_TW": 142.25,
+      "mean_TD": 742.25
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 125,
+      "T_P": 250,
+      "T_E": 350,
+      "mean_TW": 0.0,
+      "mean_TD": 600.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 400,
+      "mean_TW": 447.75,
+      "mean_TD": 1097.75
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 400,
+      "mean_TW": 142.25,
+      "mean_TD": 792.25
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 125,
+      "T_P": 250,
+      "T_E": 400,
+      "mean_TW": 0.0,
+      "mean_TD": 650.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 450,
+      "mean_TW": 497.5,
+      "mean_TD": 1197.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 450,
+      "mean_TW": 142.25,
+      "mean_TD": 842.25
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 125,
+      "T_P": 250,
+      "T_E": 450,
+      "mean_TW": 0.0,
+      "mean_TD": 700.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 500,
+      "mean_TW": 547.25,
+      "mean_TD": 1297.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 500,
+      "mean_TW": 142.25,
+      "mean_TD": 892.25
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 125,
+      "T_P": 250,
+      "T_E": 500,
+      "mean_TW": 0.0,
+      "mean_TD": 750.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 50,
+      "mean_TW": 191.25,
+      "mean_TD": 541.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 50,
+      "mean_TW": 173.0,
+      "mean_TD": 523.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 150,
+      "T_P": 300,
+      "T_E": 50,
+      "mean_TW": 0.0,
+      "mean_TD": 350.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 100,
+      "mean_TW": 199.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 100,
+      "mean_TW": 173.0,
+      "mean_TD": 573.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 150,
+      "T_P": 300,
+      "T_E": 100,
+      "mean_TW": 0.0,
+      "mean_TD": 400.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 150,
+      "mean_TW": 248.75,
+      "mean_TD": 698.75
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 150,
+      "mean_TW": 173.0,
+      "mean_TD": 623.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 150,
+      "T_P": 300,
+      "T_E": 150,
+      "mean_TW": 0.0,
+      "mean_TD": 450.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 200,
+      "mean_TW": 298.5,
+      "mean_TD": 798.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 200,
+      "mean_TW": 173.0,
+      "mean_TD": 673.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 150,
+      "T_P": 300,
+      "T_E": 200,
+      "mean_TW": 0.0,
+      "mean_TD": 500.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 250,
+      "mean_TW": 348.25,
+      "mean_TD": 898.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 250,
+      "mean_TW": 173.0,
+      "mean_TD": 723.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 150,
+      "T_P": 300,
+      "T_E": 250,
+      "mean_TW": 0.0,
+      "mean_TD": 550.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 300,
+      "mean_TW": 398.0,
+      "mean_TD": 998.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 300,
+      "mean_TW": 173.0,
+      "mean_TD": 773.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 150,
+      "T_P": 300,
+      "T_E": 300,
+      "mean_TW": 0.0,
+      "mean_TD": 600.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 350,
+      "mean_TW": 447.75,
+      "mean_TD": 1097.75
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 350,
+      "mean_TW": 173.0,
+      "mean_TD": 823.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 150,
+      "T_P": 300,
+      "T_E": 350,
+      "mean_TW": 0.0,
+      "mean_TD": 650.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 400,
+      "mean_TW": 497.5,
+      "mean_TD": 1197.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 400,
+      "mean_TW": 173.0,
+      "mean_TD": 873.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 150,
+      "T_P": 300,
+      "T_E": 400,
+      "mean_TW": 0.0,
+      "mean_TD": 700.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 450,
+      "mean_TW": 547.25,
+      "mean_TD": 1297.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 450,
+      "mean_TW": 173.0,
+      "mean_TD": 923.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 150,
+      "T_P": 300,
+      "T_E": 450,
+      "mean_TW": 0.0,
+      "mean_TD": 750.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 500,
+      "mean_TW": 597.0,
+      "mean_TD": 1397.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 500,
+      "mean_TW": 173.0,
+      "mean_TD": 973.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 150,
+      "T_P": 300,
+      "T_E": 500,
+      "mean_TW": 0.0,
+      "mean_TD": 800.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 50,
+      "mean_TW": 199.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 50,
+      "mean_TW": 191.25,
+      "mean_TD": 591.25
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 175,
+      "T_P": 350,
+      "T_E": 50,
+      "mean_TW": 0.0,
+      "mean_TD": 400.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 100,
+      "mean_TW": 248.75,
+      "mean_TD": 698.75
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 100,
+      "mean_TW": 191.25,
+      "mean_TD": 641.25
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 175,
+      "T_P": 350,
+      "T_E": 100,
+      "mean_TW": 0.0,
+      "mean_TD": 450.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 150,
+      "mean_TW": 298.5,
+      "mean_TD": 798.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 150,
+      "mean_TW": 191.25,
+      "mean_TD": 691.25
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 175,
+      "T_P": 350,
+      "T_E": 150,
+      "mean_TW": 0.0,
+      "mean_TD": 500.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 200,
+      "mean_TW": 348.25,
+      "mean_TD": 898.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 200,
+      "mean_TW": 191.25,
+      "mean_TD": 741.25
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 175,
+      "T_P": 350,
+      "T_E": 200,
+      "mean_TW": 0.0,
+      "mean_TD": 550.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 250,
+      "mean_TW": 398.0,
+      "mean_TD": 998.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 250,
+      "mean_TW": 191.25,
+      "mean_TD": 791.25
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 175,
+      "T_P": 350,
+      "T_E": 250,
+      "mean_TW": 0.0,
+      "mean_TD": 600.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 300,
+      "mean_TW": 447.75,
+      "mean_TD": 1097.75
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 300,
+      "mean_TW": 191.25,
+      "mean_TD": 841.25
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 175,
+      "T_P": 350,
+      "T_E": 300,
+      "mean_TW": 0.0,
+      "mean_TD": 650.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 350,
+      "mean_TW": 497.5,
+      "mean_TD": 1197.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 350,
+      "mean_TW": 191.25,
+      "mean_TD": 891.25
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 175,
+      "T_P": 350,
+      "T_E": 350,
+      "mean_TW": 0.0,
+      "mean_TD": 700.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 400,
+      "mean_TW": 547.25,
+      "mean_TD": 1297.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 400,
+      "mean_TW": 191.25,
+      "mean_TD": 941.25
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 175,
+      "T_P": 350,
+      "T_E": 400,
+      "mean_TW": 0.0,
+      "mean_TD": 750.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 450,
+      "mean_TW": 597.0,
+      "mean_TD": 1397.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 450,
+      "mean_TW": 191.25,
+      "mean_TD": 991.25
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 175,
+      "T_P": 350,
+      "T_E": 450,
+      "mean_TW": 0.0,
+      "mean_TD": 800.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 500,
+      "mean_TW": 646.75,
+      "mean_TD": 1496.75
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 500,
+      "mean_TW": 191.25,
+      "mean_TD": 1041.25
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 175,
+      "T_P": 350,
+      "T_E": 500,
+      "mean_TW": 0.0,
+      "mean_TD": 850.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 50,
+      "mean_TW": 248.75,
+      "mean_TD": 698.75
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 50,
+      "mean_TW": 199.0,
+      "mean_TD": 649.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 200,
+      "T_P": 400,
+      "T_E": 50,
+      "mean_TW": 0.0,
+      "mean_TD": 450.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 100,
+      "mean_TW": 298.5,
+      "mean_TD": 798.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 100,
+      "mean_TW": 199.0,
+      "mean_TD": 699.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 200,
+      "T_P": 400,
+      "T_E": 100,
+      "mean_TW": 0.0,
+      "mean_TD": 500.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 150,
+      "mean_TW": 348.25,
+      "mean_TD": 898.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 150,
+      "mean_TW": 199.0,
+      "mean_TD": 749.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 200,
+      "T_P": 400,
+      "T_E": 150,
+      "mean_TW": 0.0,
+      "mean_TD": 550.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 200,
+      "mean_TW": 398.0,
+      "mean_TD": 998.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 200,
+      "mean_TW": 199.0,
+      "mean_TD": 799.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 200,
+      "T_P": 400,
+      "T_E": 200,
+      "mean_TW": 0.0,
+      "mean_TD": 600.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 250,
+      "mean_TW": 447.75,
+      "mean_TD": 1097.75
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 250,
+      "mean_TW": 199.0,
+      "mean_TD": 849.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 200,
+      "T_P": 400,
+      "T_E": 250,
+      "mean_TW": 0.0,
+      "mean_TD": 650.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 300,
+      "mean_TW": 497.5,
+      "mean_TD": 1197.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 300,
+      "mean_TW": 199.0,
+      "mean_TD": 899.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 200,
+      "T_P": 400,
+      "T_E": 300,
+      "mean_TW": 0.0,
+      "mean_TD": 700.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 350,
+      "mean_TW": 547.25,
+      "mean_TD": 1297.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 350,
+      "mean_TW": 199.0,
+      "mean_TD": 949.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 200,
+      "T_P": 400,
+      "T_E": 350,
+      "mean_TW": 0.0,
+      "mean_TD": 750.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 400,
+      "mean_TW": 597.0,
+      "mean_TD": 1397.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 400,
+      "mean_TW": 199.0,
+      "mean_TD": 999.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 200,
+      "T_P": 400,
+      "T_E": 400,
+      "mean_TW": 0.0,
+      "mean_TD": 800.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 450,
+      "mean_TW": 646.75,
+      "mean_TD": 1496.75
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 450,
+      "mean_TW": 199.0,
+      "mean_TD": 1049.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 200,
+      "T_P": 400,
+      "T_E": 450,
+      "mean_TW": 0.0,
+      "mean_TD": 850.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 500,
+      "mean_TW": 696.5,
+      "mean_TD": 1596.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 500,
+      "mean_TW": 199.0,
+      "mean_TD": 1099.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 200,
+      "T_P": 400,
+      "T_E": 500,
+      "mean_TW": 0.0,
+      "mean_TD": 900.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 50,
+      "mean_TW": 298.5,
+      "mean_TD": 798.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 50,
+      "mean_TW": 248.75,
+      "mean_TD": 748.75
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 225,
+      "T_P": 450,
+      "T_E": 50,
+      "mean_TW": 0.0,
+      "mean_TD": 500.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 100,
+      "mean_TW": 348.25,
+      "mean_TD": 898.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 100,
+      "mean_TW": 248.75,
+      "mean_TD": 798.75
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 225,
+      "T_P": 450,
+      "T_E": 100,
+      "mean_TW": 0.0,
+      "mean_TD": 550.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 150,
+      "mean_TW": 398.0,
+      "mean_TD": 998.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 150,
+      "mean_TW": 248.75,
+      "mean_TD": 848.75
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 225,
+      "T_P": 450,
+      "T_E": 150,
+      "mean_TW": 0.0,
+      "mean_TD": 600.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 200,
+      "mean_TW": 447.75,
+      "mean_TD": 1097.75
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 200,
+      "mean_TW": 248.75,
+      "mean_TD": 898.75
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 225,
+      "T_P": 450,
+      "T_E": 200,
+      "mean_TW": 0.0,
+      "mean_TD": 650.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 250,
+      "mean_TW": 497.5,
+      "mean_TD": 1197.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 250,
+      "mean_TW": 248.75,
+      "mean_TD": 948.75
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 225,
+      "T_P": 450,
+      "T_E": 250,
+      "mean_TW": 0.0,
+      "mean_TD": 700.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 300,
+      "mean_TW": 547.25,
+      "mean_TD": 1297.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 300,
+      "mean_TW": 248.75,
+      "mean_TD": 998.75
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 225,
+      "T_P": 450,
+      "T_E": 300,
+      "mean_TW": 0.0,
+      "mean_TD": 750.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 350,
+      "mean_TW": 597.0,
+      "mean_TD": 1397.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 350,
+      "mean_TW": 248.75,
+      "mean_TD": 1048.75
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 225,
+      "T_P": 450,
+      "T_E": 350,
+      "mean_TW": 0.0,
+      "mean_TD": 800.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 400,
+      "mean_TW": 646.75,
+      "mean_TD": 1496.75
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 400,
+      "mean_TW": 248.75,
+      "mean_TD": 1098.75
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 225,
+      "T_P": 450,
+      "T_E": 400,
+      "mean_TW": 0.0,
+      "mean_TD": 850.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 450,
+      "mean_TW": 696.5,
+      "mean_TD": 1596.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 450,
+      "mean_TW": 248.75,
+      "mean_TD": 1148.75
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 225,
+      "T_P": 450,
+      "T_E": 450,
+      "mean_TW": 0.0,
+      "mean_TD": 900.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 500,
+      "mean_TW": 746.25,
+      "mean_TD": 1696.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 500,
+      "mean_TW": 248.75,
+      "mean_TD": 1198.75
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 225,
+      "T_P": 450,
+      "T_E": 500,
+      "mean_TW": 0.0,
+      "mean_TD": 950.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 50,
+      "mean_TW": 348.25,
+      "mean_TD": 898.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 50,
+      "mean_TW": 298.5,
+      "mean_TD": 848.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 250,
+      "T_P": 500,
+      "T_E": 50,
+      "mean_TW": 0.0,
+      "mean_TD": 550.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 100,
+      "mean_TW": 398.0,
+      "mean_TD": 998.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 100,
+      "mean_TW": 298.5,
+      "mean_TD": 898.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 250,
+      "T_P": 500,
+      "T_E": 100,
+      "mean_TW": 0.0,
+      "mean_TD": 600.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 150,
+      "mean_TW": 447.75,
+      "mean_TD": 1097.75
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 150,
+      "mean_TW": 298.5,
+      "mean_TD": 948.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 250,
+      "T_P": 500,
+      "T_E": 150,
+      "mean_TW": 0.0,
+      "mean_TD": 650.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 200,
+      "mean_TW": 497.5,
+      "mean_TD": 1197.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 200,
+      "mean_TW": 298.5,
+      "mean_TD": 998.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 250,
+      "T_P": 500,
+      "T_E": 200,
+      "mean_TW": 0.0,
+      "mean_TD": 700.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 250,
+      "mean_TW": 547.25,
+      "mean_TD": 1297.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 250,
+      "mean_TW": 298.5,
+      "mean_TD": 1048.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 250,
+      "T_P": 500,
+      "T_E": 250,
+      "mean_TW": 0.0,
+      "mean_TD": 750.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 300,
+      "mean_TW": 597.0,
+      "mean_TD": 1397.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 300,
+      "mean_TW": 298.5,
+      "mean_TD": 1098.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 250,
+      "T_P": 500,
+      "T_E": 300,
+      "mean_TW": 0.0,
+      "mean_TD": 800.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 350,
+      "mean_TW": 646.75,
+      "mean_TD": 1496.75
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 350,
+      "mean_TW": 298.5,
+      "mean_TD": 1148.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 250,
+      "T_P": 500,
+      "T_E": 350,
+      "mean_TW": 0.0,
+      "mean_TD": 850.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 400,
+      "mean_TW": 696.5,
+      "mean_TD": 1596.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 400,
+      "mean_TW": 298.5,
+      "mean_TD": 1198.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 250,
+      "T_P": 500,
+      "T_E": 400,
+      "mean_TW": 0.0,
+      "mean_TD": 900.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 450,
+      "mean_TW": 746.25,
+      "mean_TD": 1696.25
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 450,
+      "mean_TW": 298.5,
+      "mean_TD": 1248.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 250,
+      "T_P": 500,
+      "T_E": 450,
+      "mean_TW": 0.0,
+      "mean_TD": 950.0
+    },
+    {
+      "controller": "sequential",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 500,
+      "mean_TW": 796.0,
+      "mean_TD": 1796.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 0,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 500,
+      "mean_TW": 298.5,
+      "mean_TD": 1298.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 0,
+      "k_P": 250,
+      "T_P": 500,
+      "T_E": 500,
+      "mean_TW": 0.0,
+      "mean_TD": 1000.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 50,
+      "mean_TW": 49.0,
+      "mean_TD": 149.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 50,
+      "mean_TW": 49.0,
+      "mean_TD": 149.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 50,
+      "mean_TW": 49.0,
+      "mean_TD": 149.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 100,
+      "mean_TW": 99.0,
+      "mean_TD": 249.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 100,
+      "mean_TW": 49.0,
+      "mean_TD": 199.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 100,
+      "mean_TW": 49.0,
+      "mean_TD": 199.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 150,
+      "mean_TW": 99.0,
+      "mean_TD": 299.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 150,
+      "mean_TW": 49.0,
+      "mean_TD": 249.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 150,
+      "mean_TW": 49.0,
+      "mean_TD": 249.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 200,
+      "mean_TW": 173.0,
+      "mean_TD": 423.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 200,
+      "mean_TW": 49.0,
+      "mean_TD": 299.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 200,
+      "mean_TW": 49.0,
+      "mean_TD": 299.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 250,
+      "mean_TW": 173.0,
+      "mean_TD": 473.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 250,
+      "mean_TW": 49.0,
+      "mean_TD": 349.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 250,
+      "mean_TW": 49.0,
+      "mean_TD": 349.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 300,
+      "mean_TW": 199.0,
+      "mean_TD": 549.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 300,
+      "mean_TW": 49.0,
+      "mean_TD": 399.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 300,
+      "mean_TW": 49.0,
+      "mean_TD": 399.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 350,
+      "mean_TW": 199.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 350,
+      "mean_TW": 49.0,
+      "mean_TD": 449.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 350,
+      "mean_TW": 49.0,
+      "mean_TD": 449.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 400,
+      "mean_TW": 298.5,
+      "mean_TD": 748.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 400,
+      "mean_TW": 49.0,
+      "mean_TD": 499.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 400,
+      "mean_TW": 49.0,
+      "mean_TD": 499.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 450,
+      "mean_TW": 298.5,
+      "mean_TD": 798.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 450,
+      "mean_TW": 49.0,
+      "mean_TD": 549.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 450,
+      "mean_TW": 49.0,
+      "mean_TD": 549.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 500,
+      "mean_TW": 398.0,
+      "mean_TD": 948.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 500,
+      "mean_TW": 49.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 50,
+      "T_E": 500,
+      "mean_TW": 49.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 50,
+      "mean_TW": 99.0,
+      "mean_TD": 249.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 50,
+      "mean_TW": 49.0,
+      "mean_TD": 199.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 50,
+      "mean_TW": 49.0,
+      "mean_TD": 199.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 100,
+      "mean_TW": 99.0,
+      "mean_TD": 299.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 100,
+      "mean_TW": 49.0,
+      "mean_TD": 249.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 100,
+      "mean_TW": 49.0,
+      "mean_TD": 249.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 150,
+      "mean_TW": 173.0,
+      "mean_TD": 423.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 150,
+      "mean_TW": 49.0,
+      "mean_TD": 299.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 150,
+      "mean_TW": 49.0,
+      "mean_TD": 299.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 200,
+      "mean_TW": 173.0,
+      "mean_TD": 473.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 200,
+      "mean_TW": 49.0,
+      "mean_TD": 349.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 200,
+      "mean_TW": 49.0,
+      "mean_TD": 349.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 250,
+      "mean_TW": 199.0,
+      "mean_TD": 549.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 250,
+      "mean_TW": 49.0,
+      "mean_TD": 399.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 250,
+      "mean_TW": 49.0,
+      "mean_TD": 399.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 300,
+      "mean_TW": 199.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 300,
+      "mean_TW": 49.0,
+      "mean_TD": 449.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 300,
+      "mean_TW": 49.0,
+      "mean_TD": 449.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 350,
+      "mean_TW": 298.5,
+      "mean_TD": 748.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 350,
+      "mean_TW": 49.0,
+      "mean_TD": 499.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 350,
+      "mean_TW": 49.0,
+      "mean_TD": 499.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 400,
+      "mean_TW": 298.5,
+      "mean_TD": 798.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 400,
+      "mean_TW": 49.0,
+      "mean_TD": 549.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 400,
+      "mean_TW": 49.0,
+      "mean_TD": 549.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 450,
+      "mean_TW": 398.0,
+      "mean_TD": 948.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 450,
+      "mean_TW": 49.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 450,
+      "mean_TW": 49.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 500,
+      "mean_TW": 398.0,
+      "mean_TD": 998.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 500,
+      "mean_TW": 49.0,
+      "mean_TD": 649.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 100,
+      "T_E": 500,
+      "mean_TW": 49.0,
+      "mean_TD": 649.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 50,
+      "mean_TW": 99.0,
+      "mean_TD": 299.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 50,
+      "mean_TW": 99.0,
+      "mean_TD": 299.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 2,
+      "T_P": 150,
+      "T_E": 50,
+      "mean_TW": 49.0,
+      "mean_TD": 249.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 100,
+      "mean_TW": 173.0,
+      "mean_TD": 423.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 100,
+      "mean_TW": 99.0,
+      "mean_TD": 349.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 2,
+      "T_P": 150,
+      "T_E": 100,
+      "mean_TW": 49.0,
+      "mean_TD": 299.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 150,
+      "mean_TW": 173.0,
+      "mean_TD": 473.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 150,
+      "mean_TW": 99.0,
+      "mean_TD": 399.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 2,
+      "T_P": 150,
+      "T_E": 150,
+      "mean_TW": 49.0,
+      "mean_TD": 349.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 200,
+      "mean_TW": 199.0,
+      "mean_TD": 549.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 200,
+      "mean_TW": 99.0,
+      "mean_TD": 449.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 2,
+      "T_P": 150,
+      "T_E": 200,
+      "mean_TW": 49.0,
+      "mean_TD": 399.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 250,
+      "mean_TW": 199.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 250,
+      "mean_TW": 99.0,
+      "mean_TD": 499.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 2,
+      "T_P": 150,
+      "T_E": 250,
+      "mean_TW": 49.0,
+      "mean_TD": 449.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 300,
+      "mean_TW": 298.5,
+      "mean_TD": 748.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 300,
+      "mean_TW": 99.0,
+      "mean_TD": 549.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 2,
+      "T_P": 150,
+      "T_E": 300,
+      "mean_TW": 49.0,
+      "mean_TD": 499.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 350,
+      "mean_TW": 298.5,
+      "mean_TD": 798.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 350,
+      "mean_TW": 99.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 2,
+      "T_P": 150,
+      "T_E": 350,
+      "mean_TW": 49.0,
+      "mean_TD": 549.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 400,
+      "mean_TW": 398.0,
+      "mean_TD": 948.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 400,
+      "mean_TW": 99.0,
+      "mean_TD": 649.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 2,
+      "T_P": 150,
+      "T_E": 400,
+      "mean_TW": 49.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 450,
+      "mean_TW": 398.0,
+      "mean_TD": 998.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 450,
+      "mean_TW": 99.0,
+      "mean_TD": 699.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 2,
+      "T_P": 150,
+      "T_E": 450,
+      "mean_TW": 49.0,
+      "mean_TD": 649.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 500,
+      "mean_TW": 497.5,
+      "mean_TD": 1147.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 150,
+      "T_E": 500,
+      "mean_TW": 99.0,
+      "mean_TD": 749.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 2,
+      "T_P": 150,
+      "T_E": 500,
+      "mean_TW": 49.0,
+      "mean_TD": 699.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 50,
+      "mean_TW": 173.0,
+      "mean_TD": 423.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 50,
+      "mean_TW": 99.0,
+      "mean_TD": 349.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 2,
+      "T_P": 200,
+      "T_E": 50,
+      "mean_TW": 49.0,
+      "mean_TD": 299.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 100,
+      "mean_TW": 173.0,
+      "mean_TD": 473.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 100,
+      "mean_TW": 99.0,
+      "mean_TD": 399.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 2,
+      "T_P": 200,
+      "T_E": 100,
+      "mean_TW": 49.0,
+      "mean_TD": 349.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 150,
+      "mean_TW": 199.0,
+      "mean_TD": 549.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 150,
+      "mean_TW": 99.0,
+      "mean_TD": 449.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 2,
+      "T_P": 200,
+      "T_E": 150,
+      "mean_TW": 49.0,
+      "mean_TD": 399.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 200,
+      "mean_TW": 199.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 200,
+      "mean_TW": 99.0,
+      "mean_TD": 499.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 2,
+      "T_P": 200,
+      "T_E": 200,
+      "mean_TW": 49.0,
+      "mean_TD": 449.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 250,
+      "mean_TW": 298.5,
+      "mean_TD": 748.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 250,
+      "mean_TW": 99.0,
+      "mean_TD": 549.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 2,
+      "T_P": 200,
+      "T_E": 250,
+      "mean_TW": 49.0,
+      "mean_TD": 499.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 300,
+      "mean_TW": 298.5,
+      "mean_TD": 798.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 300,
+      "mean_TW": 99.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 2,
+      "T_P": 200,
+      "T_E": 300,
+      "mean_TW": 49.0,
+      "mean_TD": 549.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 350,
+      "mean_TW": 398.0,
+      "mean_TD": 948.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 350,
+      "mean_TW": 99.0,
+      "mean_TD": 649.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 2,
+      "T_P": 200,
+      "T_E": 350,
+      "mean_TW": 49.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 400,
+      "mean_TW": 398.0,
+      "mean_TD": 998.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 400,
+      "mean_TW": 99.0,
+      "mean_TD": 699.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 2,
+      "T_P": 200,
+      "T_E": 400,
+      "mean_TW": 49.0,
+      "mean_TD": 649.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 450,
+      "mean_TW": 497.5,
+      "mean_TD": 1147.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 450,
+      "mean_TW": 99.0,
+      "mean_TD": 749.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 2,
+      "T_P": 200,
+      "T_E": 450,
+      "mean_TW": 49.0,
+      "mean_TD": 699.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 500,
+      "mean_TW": 497.5,
+      "mean_TD": 1197.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 200,
+      "T_E": 500,
+      "mean_TW": 99.0,
+      "mean_TD": 799.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 2,
+      "T_P": 200,
+      "T_E": 500,
+      "mean_TW": 49.0,
+      "mean_TD": 749.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 50,
+      "mean_TW": 173.0,
+      "mean_TD": 473.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 50,
+      "mean_TW": 173.0,
+      "mean_TD": 473.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 3,
+      "T_P": 250,
+      "T_E": 50,
+      "mean_TW": 49.0,
+      "mean_TD": 349.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 100,
+      "mean_TW": 199.0,
+      "mean_TD": 549.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 100,
+      "mean_TW": 173.0,
+      "mean_TD": 523.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 3,
+      "T_P": 250,
+      "T_E": 100,
+      "mean_TW": 49.0,
+      "mean_TD": 399.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 150,
+      "mean_TW": 199.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 150,
+      "mean_TW": 173.0,
+      "mean_TD": 573.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 3,
+      "T_P": 250,
+      "T_E": 150,
+      "mean_TW": 49.0,
+      "mean_TD": 449.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 200,
+      "mean_TW": 298.5,
+      "mean_TD": 748.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 200,
+      "mean_TW": 173.0,
+      "mean_TD": 623.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 3,
+      "T_P": 250,
+      "T_E": 200,
+      "mean_TW": 49.0,
+      "mean_TD": 499.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 250,
+      "mean_TW": 298.5,
+      "mean_TD": 798.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 250,
+      "mean_TW": 173.0,
+      "mean_TD": 673.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 3,
+      "T_P": 250,
+      "T_E": 250,
+      "mean_TW": 49.0,
+      "mean_TD": 549.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 300,
+      "mean_TW": 398.0,
+      "mean_TD": 948.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 300,
+      "mean_TW": 173.0,
+      "mean_TD": 723.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 3,
+      "T_P": 250,
+      "T_E": 300,
+      "mean_TW": 49.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 350,
+      "mean_TW": 398.0,
+      "mean_TD": 998.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 350,
+      "mean_TW": 173.0,
+      "mean_TD": 773.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 3,
+      "T_P": 250,
+      "T_E": 350,
+      "mean_TW": 49.0,
+      "mean_TD": 649.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 400,
+      "mean_TW": 497.5,
+      "mean_TD": 1147.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 400,
+      "mean_TW": 173.0,
+      "mean_TD": 823.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 3,
+      "T_P": 250,
+      "T_E": 400,
+      "mean_TW": 49.0,
+      "mean_TD": 699.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 450,
+      "mean_TW": 497.5,
+      "mean_TD": 1197.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 450,
+      "mean_TW": 173.0,
+      "mean_TD": 873.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 3,
+      "T_P": 250,
+      "T_E": 450,
+      "mean_TW": 49.0,
+      "mean_TD": 749.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 500,
+      "mean_TW": 597.0,
+      "mean_TD": 1347.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 250,
+      "T_E": 500,
+      "mean_TW": 173.0,
+      "mean_TD": 923.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 3,
+      "T_P": 250,
+      "T_E": 500,
+      "mean_TW": 49.0,
+      "mean_TD": 799.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 50,
+      "mean_TW": 199.0,
+      "mean_TD": 549.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 50,
+      "mean_TW": 173.0,
+      "mean_TD": 523.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 3,
+      "T_P": 300,
+      "T_E": 50,
+      "mean_TW": 49.0,
+      "mean_TD": 399.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 100,
+      "mean_TW": 199.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 100,
+      "mean_TW": 173.0,
+      "mean_TD": 573.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 3,
+      "T_P": 300,
+      "T_E": 100,
+      "mean_TW": 49.0,
+      "mean_TD": 449.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 150,
+      "mean_TW": 298.5,
+      "mean_TD": 748.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 150,
+      "mean_TW": 173.0,
+      "mean_TD": 623.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 3,
+      "T_P": 300,
+      "T_E": 150,
+      "mean_TW": 49.0,
+      "mean_TD": 499.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 200,
+      "mean_TW": 298.5,
+      "mean_TD": 798.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 200,
+      "mean_TW": 173.0,
+      "mean_TD": 673.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 3,
+      "T_P": 300,
+      "T_E": 200,
+      "mean_TW": 49.0,
+      "mean_TD": 549.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 250,
+      "mean_TW": 398.0,
+      "mean_TD": 948.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 250,
+      "mean_TW": 173.0,
+      "mean_TD": 723.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 3,
+      "T_P": 300,
+      "T_E": 250,
+      "mean_TW": 49.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 300,
+      "mean_TW": 398.0,
+      "mean_TD": 998.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 300,
+      "mean_TW": 173.0,
+      "mean_TD": 773.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 3,
+      "T_P": 300,
+      "T_E": 300,
+      "mean_TW": 49.0,
+      "mean_TD": 649.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 350,
+      "mean_TW": 497.5,
+      "mean_TD": 1147.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 350,
+      "mean_TW": 173.0,
+      "mean_TD": 823.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 3,
+      "T_P": 300,
+      "T_E": 350,
+      "mean_TW": 49.0,
+      "mean_TD": 699.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 400,
+      "mean_TW": 497.5,
+      "mean_TD": 1197.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 400,
+      "mean_TW": 173.0,
+      "mean_TD": 873.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 3,
+      "T_P": 300,
+      "T_E": 400,
+      "mean_TW": 49.0,
+      "mean_TD": 749.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 450,
+      "mean_TW": 597.0,
+      "mean_TD": 1347.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 450,
+      "mean_TW": 173.0,
+      "mean_TD": 923.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 3,
+      "T_P": 300,
+      "T_E": 450,
+      "mean_TW": 49.0,
+      "mean_TD": 799.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 500,
+      "mean_TW": 597.0,
+      "mean_TD": 1397.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 300,
+      "T_E": 500,
+      "mean_TW": 173.0,
+      "mean_TD": 973.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 3,
+      "T_P": 300,
+      "T_E": 500,
+      "mean_TW": 49.0,
+      "mean_TD": 849.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 50,
+      "mean_TW": 199.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 50,
+      "mean_TW": 199.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 4,
+      "T_P": 350,
+      "T_E": 50,
+      "mean_TW": 49.0,
+      "mean_TD": 449.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 100,
+      "mean_TW": 298.5,
+      "mean_TD": 748.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 100,
+      "mean_TW": 199.0,
+      "mean_TD": 649.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 4,
+      "T_P": 350,
+      "T_E": 100,
+      "mean_TW": 49.0,
+      "mean_TD": 499.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 150,
+      "mean_TW": 298.5,
+      "mean_TD": 798.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 150,
+      "mean_TW": 199.0,
+      "mean_TD": 699.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 4,
+      "T_P": 350,
+      "T_E": 150,
+      "mean_TW": 49.0,
+      "mean_TD": 549.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 200,
+      "mean_TW": 398.0,
+      "mean_TD": 948.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 200,
+      "mean_TW": 199.0,
+      "mean_TD": 749.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 4,
+      "T_P": 350,
+      "T_E": 200,
+      "mean_TW": 49.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 250,
+      "mean_TW": 398.0,
+      "mean_TD": 998.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 250,
+      "mean_TW": 199.0,
+      "mean_TD": 799.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 4,
+      "T_P": 350,
+      "T_E": 250,
+      "mean_TW": 49.0,
+      "mean_TD": 649.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 300,
+      "mean_TW": 497.5,
+      "mean_TD": 1147.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 300,
+      "mean_TW": 199.0,
+      "mean_TD": 849.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 4,
+      "T_P": 350,
+      "T_E": 300,
+      "mean_TW": 49.0,
+      "mean_TD": 699.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 350,
+      "mean_TW": 497.5,
+      "mean_TD": 1197.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 350,
+      "mean_TW": 199.0,
+      "mean_TD": 899.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 4,
+      "T_P": 350,
+      "T_E": 350,
+      "mean_TW": 49.0,
+      "mean_TD": 749.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 400,
+      "mean_TW": 597.0,
+      "mean_TD": 1347.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 400,
+      "mean_TW": 199.0,
+      "mean_TD": 949.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 4,
+      "T_P": 350,
+      "T_E": 400,
+      "mean_TW": 49.0,
+      "mean_TD": 799.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 450,
+      "mean_TW": 597.0,
+      "mean_TD": 1397.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 450,
+      "mean_TW": 199.0,
+      "mean_TD": 999.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 4,
+      "T_P": 350,
+      "T_E": 450,
+      "mean_TW": 49.0,
+      "mean_TD": 849.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 500,
+      "mean_TW": 696.5,
+      "mean_TD": 1546.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 350,
+      "T_E": 500,
+      "mean_TW": 199.0,
+      "mean_TD": 1049.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 4,
+      "T_P": 350,
+      "T_E": 500,
+      "mean_TW": 49.0,
+      "mean_TD": 899.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 50,
+      "mean_TW": 298.5,
+      "mean_TD": 748.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 50,
+      "mean_TW": 199.0,
+      "mean_TD": 649.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 4,
+      "T_P": 400,
+      "T_E": 50,
+      "mean_TW": 49.0,
+      "mean_TD": 499.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 100,
+      "mean_TW": 298.5,
+      "mean_TD": 798.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 100,
+      "mean_TW": 199.0,
+      "mean_TD": 699.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 4,
+      "T_P": 400,
+      "T_E": 100,
+      "mean_TW": 49.0,
+      "mean_TD": 549.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 150,
+      "mean_TW": 398.0,
+      "mean_TD": 948.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 150,
+      "mean_TW": 199.0,
+      "mean_TD": 749.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 4,
+      "T_P": 400,
+      "T_E": 150,
+      "mean_TW": 49.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 200,
+      "mean_TW": 398.0,
+      "mean_TD": 998.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 200,
+      "mean_TW": 199.0,
+      "mean_TD": 799.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 4,
+      "T_P": 400,
+      "T_E": 200,
+      "mean_TW": 49.0,
+      "mean_TD": 649.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 250,
+      "mean_TW": 497.5,
+      "mean_TD": 1147.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 250,
+      "mean_TW": 199.0,
+      "mean_TD": 849.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 4,
+      "T_P": 400,
+      "T_E": 250,
+      "mean_TW": 49.0,
+      "mean_TD": 699.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 300,
+      "mean_TW": 497.5,
+      "mean_TD": 1197.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 300,
+      "mean_TW": 199.0,
+      "mean_TD": 899.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 4,
+      "T_P": 400,
+      "T_E": 300,
+      "mean_TW": 49.0,
+      "mean_TD": 749.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 350,
+      "mean_TW": 597.0,
+      "mean_TD": 1347.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 350,
+      "mean_TW": 199.0,
+      "mean_TD": 949.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 4,
+      "T_P": 400,
+      "T_E": 350,
+      "mean_TW": 49.0,
+      "mean_TD": 799.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 400,
+      "mean_TW": 597.0,
+      "mean_TD": 1397.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 400,
+      "mean_TW": 199.0,
+      "mean_TD": 999.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 4,
+      "T_P": 400,
+      "T_E": 400,
+      "mean_TW": 49.0,
+      "mean_TD": 849.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 450,
+      "mean_TW": 696.5,
+      "mean_TD": 1546.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 450,
+      "mean_TW": 199.0,
+      "mean_TD": 1049.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 4,
+      "T_P": 400,
+      "T_E": 450,
+      "mean_TW": 49.0,
+      "mean_TD": 899.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 500,
+      "mean_TW": 696.5,
+      "mean_TD": 1596.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 400,
+      "T_E": 500,
+      "mean_TW": 199.0,
+      "mean_TD": 1099.0
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 4,
+      "T_P": 400,
+      "T_E": 500,
+      "mean_TW": 49.0,
+      "mean_TD": 949.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 50,
+      "mean_TW": 298.5,
+      "mean_TD": 798.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 50,
+      "mean_TW": 298.5,
+      "mean_TD": 798.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 5,
+      "T_P": 450,
+      "T_E": 50,
+      "mean_TW": 49.0,
+      "mean_TD": 549.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 100,
+      "mean_TW": 398.0,
+      "mean_TD": 948.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 100,
+      "mean_TW": 298.5,
+      "mean_TD": 848.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 5,
+      "T_P": 450,
+      "T_E": 100,
+      "mean_TW": 49.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 150,
+      "mean_TW": 398.0,
+      "mean_TD": 998.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 150,
+      "mean_TW": 298.5,
+      "mean_TD": 898.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 5,
+      "T_P": 450,
+      "T_E": 150,
+      "mean_TW": 49.0,
+      "mean_TD": 649.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 200,
+      "mean_TW": 497.5,
+      "mean_TD": 1147.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 200,
+      "mean_TW": 298.5,
+      "mean_TD": 948.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 5,
+      "T_P": 450,
+      "T_E": 200,
+      "mean_TW": 49.0,
+      "mean_TD": 699.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 250,
+      "mean_TW": 497.5,
+      "mean_TD": 1197.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 250,
+      "mean_TW": 298.5,
+      "mean_TD": 998.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 5,
+      "T_P": 450,
+      "T_E": 250,
+      "mean_TW": 49.0,
+      "mean_TD": 749.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 300,
+      "mean_TW": 597.0,
+      "mean_TD": 1347.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 300,
+      "mean_TW": 298.5,
+      "mean_TD": 1048.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 5,
+      "T_P": 450,
+      "T_E": 300,
+      "mean_TW": 49.0,
+      "mean_TD": 799.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 350,
+      "mean_TW": 597.0,
+      "mean_TD": 1397.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 350,
+      "mean_TW": 298.5,
+      "mean_TD": 1098.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 5,
+      "T_P": 450,
+      "T_E": 350,
+      "mean_TW": 49.0,
+      "mean_TD": 849.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 400,
+      "mean_TW": 696.5,
+      "mean_TD": 1546.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 400,
+      "mean_TW": 298.5,
+      "mean_TD": 1148.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 5,
+      "T_P": 450,
+      "T_E": 400,
+      "mean_TW": 49.0,
+      "mean_TD": 899.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 450,
+      "mean_TW": 696.5,
+      "mean_TD": 1596.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 450,
+      "mean_TW": 298.5,
+      "mean_TD": 1198.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 5,
+      "T_P": 450,
+      "T_E": 450,
+      "mean_TW": 49.0,
+      "mean_TD": 949.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 500,
+      "mean_TW": 796.0,
+      "mean_TD": 1746.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 450,
+      "T_E": 500,
+      "mean_TW": 298.5,
+      "mean_TD": 1248.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 5,
+      "T_P": 450,
+      "T_E": 500,
+      "mean_TW": 49.0,
+      "mean_TD": 999.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 50,
+      "mean_TW": 398.0,
+      "mean_TD": 948.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 50,
+      "mean_TW": 298.5,
+      "mean_TD": 848.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 5,
+      "T_P": 500,
+      "T_E": 50,
+      "mean_TW": 49.0,
+      "mean_TD": 599.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 100,
+      "mean_TW": 398.0,
+      "mean_TD": 998.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 100,
+      "mean_TW": 298.5,
+      "mean_TD": 898.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 5,
+      "T_P": 500,
+      "T_E": 100,
+      "mean_TW": 49.0,
+      "mean_TD": 649.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 150,
+      "mean_TW": 497.5,
+      "mean_TD": 1147.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 150,
+      "mean_TW": 298.5,
+      "mean_TD": 948.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 5,
+      "T_P": 500,
+      "T_E": 150,
+      "mean_TW": 49.0,
+      "mean_TD": 699.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 200,
+      "mean_TW": 497.5,
+      "mean_TD": 1197.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 200,
+      "mean_TW": 298.5,
+      "mean_TD": 998.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 5,
+      "T_P": 500,
+      "T_E": 200,
+      "mean_TW": 49.0,
+      "mean_TD": 749.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 250,
+      "mean_TW": 597.0,
+      "mean_TD": 1347.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 250,
+      "mean_TW": 298.5,
+      "mean_TD": 1048.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 5,
+      "T_P": 500,
+      "T_E": 250,
+      "mean_TW": 49.0,
+      "mean_TD": 799.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 300,
+      "mean_TW": 597.0,
+      "mean_TD": 1397.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 300,
+      "mean_TW": 298.5,
+      "mean_TD": 1098.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 5,
+      "T_P": 500,
+      "T_E": 300,
+      "mean_TW": 49.0,
+      "mean_TD": 849.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 350,
+      "mean_TW": 696.5,
+      "mean_TD": 1546.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 350,
+      "mean_TW": 298.5,
+      "mean_TD": 1148.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 5,
+      "T_P": 500,
+      "T_E": 350,
+      "mean_TW": 49.0,
+      "mean_TD": 899.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 400,
+      "mean_TW": 696.5,
+      "mean_TD": 1596.5
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 400,
+      "mean_TW": 298.5,
+      "mean_TD": 1198.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 5,
+      "T_P": 500,
+      "T_E": 400,
+      "mean_TW": 49.0,
+      "mean_TD": 949.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 450,
+      "mean_TW": 796.0,
+      "mean_TD": 1746.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 450,
+      "mean_TW": 298.5,
+      "mean_TD": 1248.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 5,
+      "T_P": 500,
+      "T_E": 450,
+      "mean_TW": 49.0,
+      "mean_TD": 999.0
+    },
+    {
+      "controller": "sequential",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 500,
+      "mean_TW": 796.0,
+      "mean_TD": 1796.0
+    },
+    {
+      "controller": "macpe1",
+      "window": 100,
+      "k_P": 1,
+      "T_P": 500,
+      "T_E": 500,
+      "mean_TW": 298.5,
+      "mean_TD": 1298.5
+    },
+    {
+      "controller": "sufficient",
+      "window": 100,
+      "k_P": 5,
+      "T_P": 500,
+      "T_E": 500,
+      "mean_TW": 49.0,
+      "mean_TD": 1049.0
+    }
+  ],
+  "protocol": {
+    "requests": 200,
+    "arrivals": "0,2,...,398",
+    "spacing": 2,
+    "windows": [
+      0,
+      100
+    ],
+    "initial_state": "empty",
+    "variable_delta_P": [
+      50,
+      100,
+      150,
+      200,
+      250,
+      300,
+      350,
+      400,
+      450,
+      500,
+      550,
+      600,
+      650,
+      700,
+      750,
+      800,
+      850,
+      900
+    ],
+    "delta_E": 100,
+    "fixed_T_P": [
+      25,
+      50,
+      75,
+      100,
+      125,
+      150,
+      175,
+      200,
+      225,
+      250,
+      275,
+      300,
+      325,
+      350,
+      375,
+      400,
+      425,
+      450,
+      475,
+      500
+    ],
+    "fixed_T_E_equals_T_P": true,
+    "surface_T_P": [
+      50,
+      100,
+      150,
+      200,
+      250,
+      300,
+      350,
+      400,
+      450,
+      500
+    ],
+    "surface_T_E": [
+      50,
+      100,
+      150,
+      200,
+      250,
+      300,
+      350,
+      400,
+      450,
+      500
+    ],
+    "application_execution": "maximum of four independent uniform component durations",
+    "sequential_release": "maximum over all component actions of the admitted batch",
+    "sufficient_planners": "ceil(delta_P/spacing) for events; ceil(delta_P/window) for windows",
+    "note": "finite workload of 200 arrivals from an empty state, fully drained; not stationary averages",
+    "created_utc": "2026-10-22T13:12:56.959806+00:00",
+    "elapsed_seconds": 31.87
+  }
+}

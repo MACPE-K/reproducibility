@@ -1,0 +1,7 @@
+arrivals,controller,planners,mean_TD,mean_TD_ci_half,mean_TW,mean_TW_ci_half,mean_TW_success,mean_TW_success_ci_half,completed_requests,completed_requests_ci_half
+frequent,sequential,1,156.48,1.31,43.72,0.42,43.72,0.42,200,0.0
+frequent,macpe,1,144.71,2.1,14.93,0.31,14.95,0.33,195.5,0.84
+frequent,macpe,4,112.72,1.06,0.32,0.04,0.31,0.05,166.33,2.19
+sparse,sequential,1,111.72,0.9,3.17,0.27,3.17,0.27,200,0.0
+sparse,macpe,1,113.29,1.09,0.67,0.11,0.67,0.11,199.77,0.19
+sparse,macpe,4,112.48,1.04,0.0,0.0,0.0,0.0,199.67,0.23

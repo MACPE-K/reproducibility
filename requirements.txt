@@ -1,0 +1,4 @@
+# Pinned environment of the verification workflow (Python 3.9-3.12; 3.11 recommended).
+numpy==1.26.4
+scipy==1.13.1
+matplotlib==3.9.2
