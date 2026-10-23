@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 from collections import Counter, defaultdict
 from copy import deepcopy
+import csv
 from dataclasses import dataclass, field
 import gzip
 import json
@@ -57,7 +58,19 @@ def read(path):
 
 
 ROUNDING = 0.0051  # recorded summaries are rounded to two decimals
-PAIRED_SAVINGS = {"1": 7.3, "4": 27.4}  # response-time savings quoted in the paper, in percent
+# Paired response-time savings shown in the paper's performance table, in percent,
+# by (duration profile, k_P), for frequent arrivals.
+PAIRED_SAVINGS = {
+    ("short_short", 1): 0.0,
+    ("short_short", 4): 0.7,
+    ("long_short", 1): -9.3,
+    ("long_short", 4): 14.1,
+    ("short_long", 1): 31.6,
+    ("short_long", 4): 31.9,
+    ("long_long", 1): 7.3,
+    ("long_long", 4): 27.4,
+}
+PLACEMENT_COMPARISONS = (("sequential", 1), ("macpe", 1), ("macpe", 2), ("macpe", 4))
 
 
 def close(actual, expected, label="value", tolerance=1e-10):
@@ -256,23 +269,24 @@ def costs():
 
 
 def placement():
-    protocol, raw = campaign("placement/full", 240)
+    protocol, raw = campaign("placement/full", 300)
     ablation_protocol, raw_ablations = campaign("placement/ablations", 120)
+    identities = [exp.placement_identity(row) for row in raw]
+    require(len(set(identities)) == 300, "Duplicate full-placement runs")
+    require(
+        set(identities)
+        == {exp.placement_identity(spec) for spec in exp.placement_specifications()},
+        "Full placement campaign does not match the complete paired design",
+    )
     runs = [exp.physical_completion_view(row) for row in raw]
     ablations = [exp.physical_completion_view(row) for row in raw_ablations]
     lookup = {(r["arrival_mode"], r["policy"], r["planners"], r["replication"]): r for r in runs}
-    expected_cells, result, gains = [], [], {}
+    result = []
     for arrival in ("frequent", "sparse"):
-        for policy, planners in (("sequential", 1), ("macpe", 1), ("macpe", 4)):
+        for policy, planners in PLACEMENT_COMPARISONS:
             group = [lookup[arrival, policy, planners, rep] for rep in range(1, 31)]
             td, td_half = interval([r["metrics"]["mean_TD"] for r in group])
-            completed, completed_half = interval(
-                [r["metrics"]["completed_requests"] for r in group]
-            )
-            expected_cells += [
-                (f"{td:.1f}", f"{td_half:.1f}"),
-                (f"{completed:.2f}", f"{completed_half:.2f}"),
-            ]
+            completed, half = interval([r["metrics"]["completed_requests"] for r in group])
             result.append(
                 dict(
                     arrivals=arrival,
@@ -281,37 +295,9 @@ def placement():
                     mean_TD=td,
                     TD_ci_half=td_half,
                     completed=completed,
-                    completed_ci_half=completed_half,
+                    completed_ci_half=half,
                 )
             )
-            if arrival == "frequent" and policy == "macpe":
-                paired = []
-                for row in group:
-                    before = {
-                        q["id"]: q
-                        for q in lookup[arrival, "sequential", 1, row["replication"]]["outcomes"]
-                        if q["completed"] is not None
-                    }
-                    common = [
-                        q
-                        for q in row["outcomes"]
-                        if q["completed"] is not None and q["id"] in before
-                    ]
-                    baseline = statistics.mean(before[q["id"]]["response"] for q in common)
-                    observed = statistics.mean(q["response"] for q in common)
-                    paired.append(100 * (baseline - observed) / baseline)
-                gains[str(planners)] = statistics.mean(paired)
-    cells = re.findall(
-        r"\$([0-9.]+)\\,\\pm\\,([0-9.]+)\$", (ROOT / "reference/integrated_table.tex").read_text()
-    )
-    require(
-        cells == expected_cells,
-        "Reference table differs from completion statistics",
-    )
-    require(
-        all(round(gains[k], 1) == v for k, v in PAIRED_SAVINGS.items()),
-        "Paired gains differ from the values quoted in the paper",
-    )
     cells = [("0.0", "0.0")]
     for variant, metric in (
         ("no_aggregate", "capacity_violations"),
@@ -342,13 +328,182 @@ def placement():
         if row["ablation"] == "full":
             require(row == full[row["replication"]], "Ablation full-mechanism records differ")
     return {
-        "full_runs": 240,
+        "full_runs": 300,
         "ablation_records": 120,
         "unique_ablation_only_runs": 90,
         "performance_table": result,
-        "paired_TD_saving_percent": gains,
         "completion": "passed",
     }
+
+
+def duration_observations(raw):
+    """Reconstruct completion and initial waiting from the recorded actions and batches."""
+    outcomes = raw["outcomes"]
+    require(len(outcomes) == 200, "Duration run must contain 200 original requests")
+    require({row["id"] for row in outcomes} == set(range(200)), "Invalid request identities")
+    starts = defaultdict(list)
+    for batch in raw["batches"]:
+        for identity in batch["members"]:
+            starts[identity].append(batch["start"])
+    completed = defaultdict(dict)
+    action_ids = set()
+    for action in raw["completed_action_outcomes"]:
+        identity, component = action["request"], action["component"]
+        require(action["kind"] == "deploy", "Unexpected duration-campaign action")
+        require(action["id"] not in action_ids, "Duplicate completed action")
+        require(component not in completed[identity], "Duplicate component deployment")
+        require(action["finished"] > action["started"], "Invalid action timestamps")
+        completed[identity][component] = action["finished"]
+        action_ids.add(action["id"])
+    responses, waits, completion_times = {}, {}, {}
+    for row in outcomes:
+        identity = row["id"]
+        require(bool(starts[identity]), "Request never reached Planning")
+        first_start = min(starts[identity])
+        close(row["planning_started"], first_start, "First Planning start")
+        wait = first_start - row["arrival"]
+        require(wait >= 0, "Planning starts before request arrival")
+        close(row["first_planner_wait"], wait, "First Planning wait")
+        waits[identity] = wait
+        scope = {f"{row['application']}.c{index}" for index in range(4)}
+        require(set(completed[identity]) <= scope, "Unexpected application component")
+        finish = max(completed[identity].values()) if set(completed[identity]) == scope else None
+        completion_times[identity] = finish
+        if not row["lost"]:
+            require(finish == row["completed"], "Controller success disagrees with actions")
+        if finish is not None:
+            require(finish > row["arrival"], "Completion precedes arrival")
+            responses[identity] = finish - row["arrival"]
+    require(set(completed) <= set(waits), "Completed action has no original request")
+    metrics = dict(
+        mean_TW=statistics.mean(waits.values()),
+        mean_TD=statistics.mean(responses.values()) if responses else None,
+        completed_requests=len(responses),
+        lost_requests=200 - len(responses),
+        completion_percent=100 * len(responses) / 200,
+    )
+    close(raw["metrics"]["mean_TW"], metrics["mean_TW"], "All-request waiting mean")
+    close(raw["metrics"]["final_deployed_applications"], len(responses), "Final deployment audit")
+    observed = physical_completion_view(raw)
+    for name in ("mean_TW", "mean_TD", "completed_requests", "lost_requests"):
+        close(observed["metrics"][name], metrics[name], f"Physical completion: {name}")
+    for row in observed["outcomes"]:
+        close(row["completed"], completion_times[row["id"]], "Physical completion timestamp")
+        close(row["response"], responses.get(row["id"]), "Physical response time")
+    return dict(metrics=metrics, responses=responses, waits=waits)
+
+
+def sensitivity():
+    protocol, raw = campaign("placement/sensitivity", 480)
+    specs = exp.sensitivity_specifications()
+    fields = tuple(specs[0])
+    identities = [tuple(row[name] for name in fields) for row in raw]
+    require(len(set(identities)) == 480, "Duplicate duration runs")
+    require(
+        set(identities) == {tuple(spec[name] for name in fields) for spec in specs},
+        "Duration campaign does not match the complete paired design",
+    )
+    require(protocol["seeds"] == list(range(1, 31)), "Duration campaign seeds differ")
+    require(
+        protocol["duration_profiles"] == json.loads(json.dumps(exp.DURATION_PROFILES)),
+        "Recorded duration distributions differ",
+    )
+    for name, expected in (
+        ("failure_probability", exp.FAILURE_PROBABILITY),
+        ("executors", exp.EXECUTORS),
+        ("max_rechecks", exp.MAX_RECHECKS),
+        ("max_recomputations", exp.MAX_RECOMPUTATIONS),
+        ("window", 0),
+    ):
+        require(protocol[name] == expected, f"Duration protocol differs: {name}")
+    require(
+        all(r["metrics"][metric] == 0 for r in raw for metric in SAFETY_METRICS),
+        "Duration campaign safety violation",
+    )
+    observed = {
+        (
+            r["duration_profile"],
+            r["policy"],
+            r["planners"],
+            r["replication"],
+        ): duration_observations(r)
+        for r in raw
+    }
+    full_runs = exp.read_json(DATA / "placement/full/runs.json.gz")
+    baseline = {
+        (r["policy"], r["planners"], r["replication"]): r
+        for r in full_runs
+        if r["arrival_mode"] == "frequent"
+    }
+    for row in raw:
+        if row["duration_profile"] == "long_long":
+            copied = {name: value for name, value in row.items() if name != "duration_profile"}
+            original = baseline[row["policy"], row["planners"], row["replication"]]
+            require(
+                normalized(copied) == normalized(original),
+                "Long/long duration run differs from the frequent-arrival baseline",
+            )
+    sparse = {
+        (r["policy"], r["planners"], r["replication"]): duration_observations(r)
+        for r in full_runs
+        if r["arrival_mode"] == "sparse" and r["planners"] in (1, 2, 4)
+    }
+    with (ROOT / "reference/placement_performance_table.csv").open(newline="") as stream:
+        csv_rows = list(csv.DictReader(stream))
+    require(len(csv_rows) == 20, "The performance table must contain twenty rows")
+    blocks = [("frequent", profile) for profile in exp.DURATION_PROFILES] + [
+        ("sparse", "long_long")
+    ]
+    expected_cells, gains, index = [], {}, 0
+    for arrival, profile in blocks:
+        for policy, planners in PLACEMENT_COMPARISONS:
+            if arrival == "frequent":
+                group = [observed[profile, policy, planners, seed] for seed in range(1, 31)]
+                reference = [observed[profile, "sequential", 1, seed] for seed in range(1, 31)]
+            else:
+                group = [sparse[policy, planners, seed] for seed in range(1, 31)]
+                reference = [sparse["sequential", 1, seed] for seed in range(1, 31)]
+            csv_row = csv_rows[index]
+            index += 1
+            labels = (csv_row["duration_profile"], csv_row["arrivals"], csv_row["controller"])
+            require(labels == (profile, arrival, policy), "Performance table row labels differ")
+            require(int(csv_row["planners"]) == planners, "Performance table planner count differs")
+            for metric in ("mean_TW", "mean_TD", "completed_requests"):
+                mean, half = interval([row["metrics"][metric] for row in group])
+                close(float(csv_row[metric]), mean, metric, tolerance=ROUNDING)
+                close(float(csv_row[metric + "_ci_half"]), half, metric, tolerance=ROUNDING)
+                expected_cells.append((f"{mean:.1f}", f"{half:.1f}"))
+            if policy == "sequential":
+                require(
+                    csv_row["paired_saving_percent"] == "", "Sequential rows have no paired saving"
+                )
+                continue
+            paired = []
+            for mac, seq in zip(group, reference):
+                common = sorted(set(seq["responses"]) & set(mac["responses"]))
+                require(bool(common), "Duration pair has no common completed request")
+                before = statistics.mean(seq["responses"][identity] for identity in common)
+                after = statistics.mean(mac["responses"][identity] for identity in common)
+                paired.append(100 * (before - after) / before)
+            saving = statistics.mean(paired)
+            close(
+                float(csv_row["paired_saving_percent"]), saving, "paired saving", tolerance=ROUNDING
+            )
+            expected_cells.append((f"{saving:.1f}", None))
+            if arrival == "frequent" and (profile, planners) in PAIRED_SAVINGS:
+                gains[profile, planners] = round(saving, 1)
+    table = (ROOT / "reference/placement_performance_table.tex").read_text()
+    cells = re.findall(r"\$(-?[0-9.]+)(?:\\,\\pm\\,([0-9.]+))?\$", table)
+    cells = [(mean, half or None) for mean, half in cells]
+    require(cells == expected_cells, "Performance table differs from the recorded runs")
+    require(gains == PAIRED_SAVINGS, "Paired savings differ from the values quoted in the paper")
+    return dict(
+        runs=480,
+        baseline_matches=120,
+        table_rows=20,
+        paired_savings=list(gains.values()),
+        status="passed",
+    )
 
 
 # Replay selected runs; elapsed wall time is excluded from comparisons.
@@ -449,6 +604,7 @@ def replay(output):
             [
                 dict(arrival_mode="frequent", policy="sequential", planners=1),
                 dict(arrival_mode="frequent", policy="macpe", planners=4),
+                dict(arrival_mode="sparse", policy="macpe", planners=2),
                 dict(arrival_mode="sparse", policy="macpe", planners=4),
             ],
         ),
@@ -470,6 +626,28 @@ def replay(output):
                 exp.physical_completion_view(actual),
                 exp.physical_completion_view(expected),
             )
+    rows = exp.read_json(base / "placement/sensitivity/runs.json.gz")
+    for profile, policy, planners in (
+        ("short_short", "sequential", 1),
+        ("long_short", "macpe", 1),
+        ("long_short", "macpe", 2),
+        ("short_long", "macpe", 4),
+    ):
+        expected = next(
+            row
+            for row in rows
+            if (row["duration_profile"], row["policy"], row["planners"], row["replication"])
+            == (profile, policy, planners, 1)
+        )
+        spec = {name: expected[name] for name in fields + ("duration_profile",)}
+        actual = exp.run_placement(spec)
+        label = "C-duration:" + json.dumps(spec, sort_keys=True)
+        check(label, actual, expected)
+        check(
+            label + ":effective",
+            physical_completion_view(actual),
+            physical_completion_view(expected),
+        )
     return dict(comparisons=len(checks), checks=checks, status="passed")
 
 
@@ -1346,6 +1524,166 @@ class WorkloadTests(unittest.TestCase):
             make_workload(1, "unknown")
 
 
+class DurationSensitivityTests(unittest.TestCase):
+    @staticmethod
+    def spec(profile="long_long", seed=7, policy="macpe", planners=1):
+        return dict(
+            replication=seed,
+            arrival_mode="frequent",
+            window=0,
+            policy=policy,
+            planners=planners,
+            ablation="full",
+            duration_profile=profile,
+        )
+
+    @staticmethod
+    def inputs(work, durations=True):
+        result = {name: value for name, value in work.items() if name != "requests"}
+        result = deepcopy(result)
+        result["requests"] = [
+            {name: value for name, value in vars(request).items() if name != "plan"}
+            for request in work["requests"]
+        ]
+        if not durations:
+            for component in result["components"].values():
+                component.pop("duration")
+            result["requests"] = [
+                {
+                    name: value
+                    for name, value in request.items()
+                    if name not in ("planning", "durations")
+                }
+                for request in result["requests"]
+            ]
+        return result
+
+    def test_profiles_preserve_arrivals_dags_demands_and_resource_capacities(self):
+        for seed in (1, 7, 30):
+            baseline = self.inputs(make_workload(seed, "frequent"), durations=False)
+            for profile in exp.DURATION_PROFILES:
+                with self.subTest(seed=seed, profile=profile):
+                    work = exp.placement_workload(self.spec(profile, seed))
+                    self.assertEqual(self.inputs(work, durations=False), baseline)
+
+    def test_long_long_and_absent_profile_preserve_original_workload_exactly(self):
+        for seed in (1, 7, 30):
+            original = self.inputs(make_workload(seed, "frequent"))
+            spec = self.spec(seed=seed)
+            self.assertEqual(self.inputs(exp.placement_workload(spec)), original)
+            spec.pop("duration_profile")
+            self.assertEqual(self.inputs(exp.placement_workload(spec)), original)
+
+    def test_duration_ranges_and_component_request_consistency(self):
+        for profile, bounds in exp.DURATION_PROFILES.items():
+            work = exp.placement_workload(self.spec(profile))
+            planning = [request.planning for request in work["requests"]]
+            actions = [component["duration"] for component in work["components"].values()]
+            for values, limits in (
+                (planning, bounds["planning"]),
+                (actions, bounds["action_duration"]),
+            ):
+                self.assertTrue(all(limits[0] <= value <= limits[1] for value in values))
+                self.assertGreater(len(set(values)), 1)
+            for request in work["requests"]:
+                self.assertEqual(
+                    request.durations,
+                    {name: work["components"][name]["duration"] for name in request.scope},
+                )
+
+    def test_planning_and_action_duration_factors_are_independently_paired(self):
+        work = {
+            profile: exp.placement_workload(self.spec(profile)) for profile in exp.DURATION_PROFILES
+        }
+        for a, b in (("short_short", "short_long"), ("long_short", "long_long")):
+            self.assertEqual(
+                [r.planning for r in work[a]["requests"]], [r.planning for r in work[b]["requests"]]
+            )
+        for a, b in (("short_short", "long_short"), ("short_long", "long_long")):
+            self.assertEqual(
+                [r.durations for r in work[a]["requests"]],
+                [r.durations for r in work[b]["requests"]],
+            )
+
+    def test_controllers_share_inputs_and_replications_are_independent(self):
+        for profile in exp.DURATION_PROFILES:
+            baseline = self.inputs(exp.placement_workload(self.spec(profile)))
+            for policy, planners in (("sequential", 1), ("macpe", 2), ("macpe", 4)):
+                self.assertEqual(
+                    self.inputs(
+                        exp.placement_workload(self.spec(profile, policy=policy, planners=planners))
+                    ),
+                    baseline,
+                )
+            other = self.inputs(exp.placement_workload(self.spec(profile, seed=8)))
+            self.assertNotEqual(baseline["applications"], other["applications"])
+            self.assertNotEqual(baseline["requests"], other["requests"])
+
+    def test_complete_factorial_design_has_unique_checkpoints(self):
+        specs = exp.sensitivity_specifications()
+        expected = {
+            (profile, policy, k, seed)
+            for profile in exp.DURATION_PROFILES
+            for policy, k in PLACEMENT_COMPARISONS
+            for seed in range(1, 31)
+        }
+        self.assertEqual(len(specs), 480)
+        self.assertEqual(
+            {(s["duration_profile"], s["policy"], s["planners"], s["replication"]) for s in specs},
+            expected,
+        )
+        self.assertEqual(len({exp.placement_identity(spec) for spec in specs}), 480)
+        self.assertTrue(
+            all(
+                s["window"] == 0 and s["arrival_mode"] == "frequent" and s["ablation"] == "full"
+                for s in specs
+            )
+        )
+
+    def test_full_design_includes_two_planners_and_preserves_ablation_controller(self):
+        specs = exp.placement_specifications()
+        expected = {
+            (arrival, policy, k, seed)
+            for arrival in ("frequent", "sparse")
+            for policy, k in PLACEMENT_COMPARISONS + (("macpe", 3),)
+            for seed in range(1, 31)
+        }
+        self.assertEqual(len(specs), 300)
+        self.assertEqual(
+            {(s["arrival_mode"], s["policy"], s["planners"], s["replication"]) for s in specs},
+            expected,
+        )
+        self.assertEqual(len({exp.placement_identity(spec) for spec in specs}), 300)
+        ablations = exp.placement_specifications(ablations=True)
+        self.assertEqual(len(ablations), 120)
+        self.assertTrue(all(s["planners"] == 3 and s["policy"] == "macpe" for s in ablations))
+
+    def test_unknown_duration_profile_is_rejected(self):
+        for profile in ("unknown", None):
+            with self.assertRaises(ValueError):
+                exp.placement_workload(self.spec(profile))
+
+    def test_waiting_counts_first_planning_start_and_excludes_retries(self):
+        work = _test_workload(count=3, host_capacity=3, bandwidth=3, arrivals=[0, 1, 2])
+
+        def failure(action, request, attempt, rng):
+            return (
+                1 if request.id == 0 and attempt == 0 and action.component.endswith(".a") else None
+            )
+
+        sim = BatchedNetworkDagSimulator(
+            **work, planners=1, policy="sequential", failure=failure, max_recomputations=10
+        )
+        metrics = sim.run()
+        starts = [batch["start"] for batch in sim.batches if 0 in batch["members"]]
+        self.assertGreater(len(starts), 1)
+        self.assertGreater(max(starts), min(starts))
+        self.assertEqual(work["requests"][0].started, min(starts))
+        self.assertGreater(work["requests"][0].recomputations, 0)
+        self.assertEqual([r.started - r.arrival for r in work["requests"]], [0, 5, 4])
+        self.assertEqual(metrics["first_planner_wait_mean"], 3)
+
+
 # Successive migration candidates
 
 
@@ -1574,6 +1912,7 @@ def main():
             result["timing"] = timing()
             result["costs"] = costs()
             result["placement"] = placement()
+            result["duration_sensitivity"] = sensitivity()
         if args.command in ("tests", "all"):
             result["tests"] = run_tests()
         if args.command in ("replay", "all"):

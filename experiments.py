@@ -41,7 +41,15 @@ TIMING_CONTROLLERS = ("sequential", "macpe1", "sufficient")
 VARIABLE_CONTROLLERS = ("sequential", "macpe1", "macpe2", "macpe3", "sufficient")
 COST_CONTROLLERS = (("sequential", 1), ("macpe", 1), ("macpe", 3))
 CAPACITY_SCALES = (0.5, 0.75, 1.0, 2.0, 4.0, 16.0)
-PLACEMENT_CONTROLLERS = ((1, "sequential"), (1, "macpe"), (3, "macpe"), (4, "macpe"))
+PLACEMENT_CONTROLLERS = ((1, "sequential"), (1, "macpe"), (2, "macpe"), (3, "macpe"), (4, "macpe"))
+# Campaign C duration profiles: inclusive bounds of the uniform Planning and action durations.
+# The long values are those of the recorded placement workload.
+DURATION_PROFILES = {
+    "short_short": dict(planning=(2, 4), action_duration=(2, 6)),
+    "long_short": dict(planning=(20, 40), action_duration=(2, 6)),
+    "short_long": dict(planning=(2, 4), action_duration=(20, 60)),
+    "long_long": dict(planning=(20, 40), action_duration=(20, 60)),
+}
 EXECUTORS = 16
 FAILURE_PROBABILITY = 0.1
 MAX_RECHECKS = 3
@@ -683,13 +691,48 @@ def physical_completion_view(raw, *, scopes=None):
 
 def placement_identity(spec):
     """Checkpoint name of a placement run."""
-    return f"r{spec['replication']:02d}_w{spec['window']}_{spec['arrival_mode']}_{spec['policy']}_k{spec['planners']}_{spec['ablation']}"
+    identity = "r{replication:02d}_w{window}_{arrival_mode}_{policy}_k{planners}_{ablation}".format(
+        **spec
+    )
+    if "duration_profile" in spec:
+        identity += "_" + spec["duration_profile"]
+    return identity
+
+
+def placement_workload(spec):
+    """Placement workload of a replication, with the durations of its profile when one is given.
+
+    Short durations come from generators keyed by the seed and the phase, so a request keeps
+    the same short Planning duration, and a component the same short action duration, in
+    every profile and under every controller. Long durations are the recorded workload's own.
+    """
+    profile = spec.get("duration_profile")
+    if "duration_profile" in spec and profile not in DURATION_PROFILES:
+        raise ValueError(f"Unknown duration profile: {profile}")
+    seed = spec["replication"]
+    work = make_workload(seed, spec["arrival_mode"])
+    if profile is None:
+        return work
+    durations = DURATION_PROFILES[profile]
+    if durations["planning"] != WORKLOAD["planning"]:
+        rng = stream(seed, "duration_sensitivity", "planning")
+        for request in work["requests"]:
+            request.planning = rng.randint(*durations["planning"])
+    if durations["action_duration"] != WORKLOAD["action_duration"]:
+        rng = stream(seed, "duration_sensitivity", "action")
+        for component in work["components"].values():
+            component["duration"] = rng.randint(*durations["action_duration"])
+        for request in work["requests"]:
+            request.durations = {
+                component: work["components"][component]["duration"] for component in request.scope
+            }
+    return work
 
 
 def _run_full_placement(spec):
     """Run one placement specification with every mechanism enabled."""
     seed = spec["replication"]
-    work = make_workload(seed, spec["arrival_mode"])
+    work = placement_workload(spec)
     sim = BatchedNetworkDagSimulator(
         **{
             name: work[name]
@@ -888,6 +931,24 @@ def placement_specifications(replications=30, windows=(0,), ablations=False):
     ]
 
 
+def sensitivity_specifications(replications=30):
+    """Four duration profiles with sequential control and one, two or four planners."""
+    return [
+        dict(
+            replication=replication,
+            window=0,
+            arrival_mode="frequent",
+            planners=planners,
+            policy=policy,
+            ablation="full",
+            duration_profile=profile,
+        )
+        for replication in range(1, replications + 1)
+        for profile in DURATION_PROFILES
+        for planners, policy in ((1, "sequential"), (1, "macpe"), (2, "macpe"), (4, "macpe"))
+    ]
+
+
 # Checkpointed execution and command-line interface.
 def _execute(specs, runner, identity, output, workers, resume=False, reused=None):
     """Run the missing specifications with one checkpoint file per run; resume if asked."""
@@ -1046,9 +1107,57 @@ def placement_campaign(
     return runs
 
 
+def sensitivity_campaign(output, workers=2, replications=30, resume=False):
+    """Campaign C: duration sensitivity with paired placement workloads."""
+    output = Path(output)
+    specs = sensitivity_specifications(replications)
+    began = time.perf_counter()
+    runs = _execute(specs, run_placement, placement_identity, output, workers, resume)
+    write_json(output / "runs.json.gz", runs)
+    protocol = dict(
+        campaign="duration_sensitivity",
+        replications=replications,
+        seeds=list(range(1, replications + 1)),
+        run_count=len(runs),
+        duration_profiles=DURATION_PROFILES,
+        duration_distribution="discrete uniform, inclusive bounds; simulated time slots",
+        action_duration="duration of one component action, not an application deployment",
+        arrival_mode="frequent",
+        arrival_gap=WORKLOAD["arrival_gap"]["frequent"],
+        window=0,
+        controllers=[
+            dict(policy=policy, planners=planners)
+            for planners, policy in ((1, "sequential"), (1, "macpe"), (2, "macpe"), (4, "macpe"))
+        ],
+        workload_parameters=WORKLOAD,
+        pairing=(
+            "same infrastructure, application DAGs, demands and arrivals for every profile"
+            " and controller of a seed"
+        ),
+        short_duration_sampling=(
+            "generators keyed by seed and phase; shared across profiles and controllers"
+        ),
+        long_durations="recorded placement draws; long_long equals the frequent-arrival baseline",
+        executors=EXECUTORS,
+        failure_probability=FAILURE_PROBABILITY,
+        max_rechecks=MAX_RECHECKS,
+        max_recomputations=MAX_RECOMPUTATIONS,
+        instantaneous_checks=True,
+        observation="physical completion of requested components; controller flags retained",
+        waiting_population="all original requests; arrival to first Planning start",
+        response_population="completed requests; paired comparisons use common completions",
+        generated_utc=datetime.now(timezone.utc).isoformat(),
+        wall_seconds=time.perf_counter() - began,
+    )
+    write_json(output / "protocol.json", rounded(protocol))
+    return runs
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("campaign", choices=("timing", "costs", "placement", "ablations", "full"))
+    parser.add_argument(
+        "campaign", choices=("timing", "costs", "placement", "ablations", "sensitivity", "full")
+    )
     parser.add_argument("--output", type=Path, default=ROOT / "reproduction" / "full")
     parser.add_argument("--workers", type=int, default=2)
     parser.add_argument(
@@ -1087,6 +1196,13 @@ def main():
             args.windows,
             ablations=True,
             reuse_full=args.output / "placement" / "full",
+            resume=args.resume,
+        )
+    if args.campaign in ("sensitivity", "full"):
+        sensitivity_campaign(
+            args.output / "placement" / "sensitivity",
+            args.workers,
+            args.replications,
             resume=args.resume,
         )
     print(f"Results: {args.output}")
