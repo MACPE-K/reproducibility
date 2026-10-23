@@ -39,7 +39,7 @@ python theory.py --self-check
 python report.py all
 ```
 
-Outputs go to `reproduction/`. The checks cover 9,720 timing runs, 555 capacity/cost runs, and 900 placement/ablation/sensitivity records, representing 750 distinct runs. `requirements.txt` pins the versions used by the verification workflow; the checks also pass with Python 3.13, NumPy 2.5, SciPy 1.18, and Matplotlib 3.11, in about three minutes.
+Outputs go to `reproduction/`. The checks cover 9,720 timing runs, 555 capacity/cost runs, and 900 placement/ablation/sensitivity records, representing 750 distinct runs. `requirements.txt` pins the versions used for verification; the checks also pass with Python 3.13, NumPy 2.5, SciPy 1.18, and Matplotlib 3.11, in about three minutes.
 
 To rerun the complete campaigns and regenerate outputs:
 
@@ -63,4 +63,4 @@ python report.py tables --data reproduction/full
 
 ## Checks
 
-`verify.py all` recomputes the statistics of every recorded run from the stored records, replays selected runs and compares them with the records, and runs the behavioral tests. `theory.py --self-check` compares the recurrences with exhaustive enumerations of small cases. The GitHub workflow runs these checks on every push. The checks do not rerun the complete campaigns; the `protocol.json` files record each campaign as executed. Migration, successive revisions, and revision generations have separate behavioral tests.
+`verify.py all` recomputes the statistics of every recorded run from the stored records, replays selected runs and compares them with the records, and runs the behavioral tests. `theory.py --self-check` compares the recurrences with exhaustive enumerations of small cases. The checks do not rerun the complete campaigns; the `protocol.json` files record each campaign as executed. Migration, successive revisions, and revision generations have separate behavioral tests.
